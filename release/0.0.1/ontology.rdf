@@ -1,0 +1,468 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/peco#"
+     xml:base="https://w3id.org/peco"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:skos1="http://www.w3.org/2008/05/skos#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/peco">
+        <owl:versionIRI rdf:resource="https://w3id.org/peco/0.0.1"/>
+        <dc:description xml:lang="en">This ontology defines a vocabulary for describing provenance traces of carbon emission calculations by capturing the quantifiable measurements of carbon emission sources used by some activities (e.g., electricity used by a machinery to produce a product, petrol used to make a car journey, etc.) and emission conversion factors used to estimate the carbon emissions produced by these. In addition, the ontology provides the ability to capture various data transformations that occurred before energy estimates may be used with relevant conversion factors. For example, sensors may provide raw readings about a water flow of an irrigation rig in an agri-food operation which is then used as a proxy to estimate the total volume of fertilisers used.</dc:description>
+        <dc:title xml:lang="en">The Provenance of Emission Calculations Ontology</dc:title>
+        <terms:abstract xml:lang="en">With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to enhance the transparency of the carbon footprint calculations via detailed provenance traces.</terms:abstract>
+        <terms:created xml:lang="en">November 15th, 2022</terms:created>
+        <terms:creator rdf:nodeID="genid1"/>
+        <terms:creator rdf:nodeID="genid2"/>
+        <terms:creator rdf:nodeID="genid3"/>
+        <terms:creator rdf:nodeID="genid4"/>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
+        <terms:modified xml:lang="en">March 9th, 2023</terms:modified>
+        <vann:preferredNamespacePrefix xml:lang="en">peco</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/peco#</vann:preferredNamespaceUri>
+        <owl:versionInfo xml:lang="en">0.0.1</owl:versionInfo>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <org:memberOf rdf:resource="https://www.open.ac.uk#this"/>
+        <foaf:name xml:lang="en">Iman Naja</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid2">
+        <org:memberOf rdf:resource="https://www.upm.es#this"/>
+        <foaf:name xml:lang="en">Daniel Garijo</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <org:memberOf rdf:resource="https://www.abdn.ac.uk/#this"/>
+        <foaf:name xml:lang="en">Milan Markovic</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid4">
+        <org:memberOf rdf:resource="https://www.cs.ox.ac.uk#this"/>
+        <foaf:name xml:lang="en">Stefano Germano</foaf:name>
+    </rdf:Description>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+
+
+
+    <!-- http://www.w3.org/2008/05/skos#prefLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2008/05/skos#prefLabel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+
+
+
+    <!-- http://www.w3.org/ns/org#memberOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/org#memberOf"/>
+
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+
+    <!-- http://qudt.org/schema/qudt/hasQuantityKind -->
+
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/hasQuantityKind">
+        <rdfs:domain rdf:resource="https://qudt.org/2.1/schema/qudt/Quantity"/>
+        <rdfs:range rdf:resource="https://qudt.org/2.1/schema/qudt/QuantityKind"/>
+        <rdfs:label>has quantity kind</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://qudt.org/schema/qudt/unit -->
+
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/unit">
+        <rdfs:domain rdf:resource="https://qudt.org/2.1/schema/qudt/Quantity"/>
+        <rdfs:range rdf:resource="https://qudt.org/2.1/schema/qudt/Unit"/>
+        <rdfs:comment>A reference to the unit of measure of a quantity (variable or constant) of interest.</rdfs:comment>
+        <rdfs:label>unit</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.w3.org/ns/sosa/hasFeatureOfInterest -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+
+
+
+    <!-- http://www.w3.org/ns/sosa/hasResult -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasResult"/>
+
+
+
+    <!-- http://www.w3.org/ns/sosa/madeBySensor -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeBySensor"/>
+
+
+
+    <!-- http://www.w3.org/ns/sosa/phenomenonTime -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/phenomenonTime"/>
+
+
+
+    <!-- https://w3id.org/peco#hasEmmissionScore -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/peco#hasEmmissionScore">
+        <rdfs:domain rdf:resource="https://w3id.org/peco#EmissionGenerationActivity"/>
+        <rdfs:range rdf:resource="https://qudt.org/2.1/schema/qudt/Quantity"/>
+        <rdfs:comment>A property linking peco:EmissionGenerationActivity with a quantifiable representation of the amount of emissions prodcued by this activity.</rdfs:comment>
+        <rdfs:label>has emission score</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity"/>
+
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
+
+
+
+    <!-- http://www.w3.org/ns/prov#Plan -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Plan">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    </owl:Class>
+
+
+
+    <!-- http://www.w3.org/ns/sosa/Result -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Result"/>
+
+
+
+    <!-- http://www.w3.org/ns/sosa/Sensor -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor"/>
+
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+
+
+
+    <!-- https://qudt.org/2.1/schema/qudt/Quantity -->
+
+
+    <owl:Class rdf:about="https://qudt.org/2.1/schema/qudt/Quantity">
+        <rdfs:comment>&lt;p class=\&quot;lm-para\&quot;&gt;A &lt;b&gt;quantity&lt;/b&gt; is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying &lt;b&gt;quantity kind&lt;/b&gt; is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck&apos;s constant, the electric permittivity of free space, and the fine structure constant. &lt;/p&gt;
+
+&lt;p class=\&quot;lm-para\&quot;&gt;In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points, velocity of a car, the pressure of the atmosphere, and a person&apos;s weight; and units are used to describe their numerical measure.
+
+&lt;p class=\&quot;lm-para\&quot;&gt;Many &lt;b&gt;quantity kinds&lt;/b&gt; are related to each other by various physical laws, and as a result, the associated units of some quantity kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance divided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded as \&quot;fundamental\&quot; in this sense.&lt;/p&gt;
+&lt;p class=\&quot;lm-para\&quot;&gt;A quantity is distinguished from a \&quot;quantity kind\&quot; in that the former carries a value and the latter is a type specifier.&lt;/p&gt;</rdfs:comment>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://qudt.org/2.1/schema/qudt/QuantityKind -->
+
+
+    <owl:Class rdf:about="https://qudt.org/2.1/schema/qudt/QuantityKind"/>
+
+
+
+    <!-- https://qudt.org/2.1/schema/qudt/Unit -->
+
+
+    <owl:Class rdf:about="https://qudt.org/2.1/schema/qudt/Unit">
+        <rdfs:comment>A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\(Q = nU\\).</rdfs:comment>
+        <rdfs:label>Unit</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/peco#CalculationFormula -->
+
+
+    <owl:Class rdf:about="https://w3id.org/peco#CalculationFormula">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Plan"/>
+        <rdfs:comment>A generic extension point for defining the formula that was followed by the peco:EmissionCalculationActivity. If no external vocabulary is used to describe the semantics of the formula use rdf:value to provide human readable details of the formula (e.g., energy quantity * converspon factor value).</rdfs:comment>
+        <rdfs:label>Calculation formula</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/peco#EmissionCalculationActivity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/peco#EmissionCalculationActivity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:comment>An activity representing a whole or a part of the carbon emission calculation process.</rdfs:comment>
+        <rdfs:label>Emission Calculation Activity</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/peco#EmissionCalculationEntity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/peco#EmissionCalculationEntity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:subClassOf rdf:resource="https://qudt.org/2.1/schema/qudt/Quantity"/>
+        <rdfs:comment>A prov:Entitiy representing quantifieble input and output data described as qudt:Quantity that influenced emission calculation process. If this data is produced as a result of some sensor observation it would be also of type sosa:Result.</rdfs:comment>
+        <rdfs:label>Emission Calculation Entity</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/peco#EmissionGenerationActivity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/peco#EmissionGenerationActivity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:comment>An activity that produces emissions. For example, training of ML models, driving a car, farming operation, etc. This activity can be represented at differentl levels of abstraction, for example, as a single overarching activity (e.g., factory producion for year 2022) or as a number of smaller activities (e.g., production of a single batch of products).</rdfs:comment>
+        <rdfs:label>Emission Generation Activity</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/peco#Estimate -->
+
+
+    <owl:Class rdf:about="https://w3id.org/peco#Estimate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/peco#EmissionCalculationEntity"/>
+        <rdfs:comment>A special type of peco:EmissionCalculationData indicating that values were not meassured precisely (e.g., via sensors) but are based on an estimate produced by a human or machine (e.g., AI prediction)</rdfs:comment>
+        <rdfs:label>Estimate</rdfs:label>
+    </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+
+    <!-- https://w3id.org/peco#EmissionScore -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/peco#EmissionScore">
+        <rdf:type rdf:resource="https://qudt.org/2.1/schema/qudt/QuantityKind"/>
+        <rdfs:comment>The result of the peco:EmissionCalculationActivity representing the carbon emissions produced by the linked peco:EmissionGenerationActivity.</rdfs:comment>
+        <rdfs:label>Emission Score</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://www.abdn.ac.uk/#this -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.abdn.ac.uk/#this">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:homepage>https://www.abdn.ac.uk/</foaf:homepage>
+        <foaf:name>University of Aberdeen</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://www.cs.ox.ac.uk#this -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.cs.ox.ac.uk#this">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:homepage>https://www.cs.ox.ac.uk</foaf:homepage>
+        <foaf:name>University of Oxford</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://www.open.ac.uk#this -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.open.ac.uk#this">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:homepage>https://www.open.ac.uk</foaf:homepage>
+        <foaf:name>The Open University</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://www.upm.es#this -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.upm.es#this">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:homepage>https://www.upm.es</foaf:homepage>
+        <foaf:name>Universidad Politécnica de Madrid</foaf:name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18.2021-07-30T21:49:07Z) https://github.com/owlcs/owlapi/ -->

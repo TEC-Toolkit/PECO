@@ -1,0 +1,336 @@
+<h2 id="crossreference" class="list">Cross-reference for The Provenance of Emission Calculations Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The Provenance of Emission Calculations Ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#CalculationFormula" title="https://w3id.org/peco#CalculationFormula">Calculation formula</a>
+      </li>
+      <li>
+         <a href="#EmissionCalculationActivity"
+            title="https://w3id.org/peco#EmissionCalculationActivity">Emission Calculation Activity</a>
+      </li>
+      <li>
+         <a href="#EmissionCalculationEntity" title="https://w3id.org/peco#EmissionCalculationEntity">Emission Calculation Entity</a>
+      </li>
+      <li>
+         <a href="#EmissionGenerationActivity" title="https://w3id.org/peco#EmissionGenerationActivity">Emission Generation Activity</a>
+      </li>
+      <li>
+         <a href="#Estimate" title="https://w3id.org/peco#Estimate">Estimate</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/prov#Plan" title="http://www.w3.org/ns/prov#Plan">
+            <span>plan</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://qudt.org/2.1/schema/qudt/Quantity" title="https://qudt.org/2.1/schema/qudt/Quantity">Quantity</a>
+      </li>
+      <li>
+         <a href="#https://qudt.org/2.1/schema/qudt/Unit" title="https://qudt.org/2.1/schema/qudt/Unit">Unit</a>
+      </li>
+   </ul>
+   <div class="entity" id="CalculationFormula">
+      <h3>Calculation formula<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/peco#CalculationFormula</p>
+      <div class="comment">
+         <span class="markdown">A generic extension point for defining the formula that was followed by the peco:EmissionCalculationActivity. If no external vocabulary is used to describe the semantics of the formula use rdf:value to provide human readable details of the formula (e.g., energy quantity * converspon factor value).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/prov#Plan" title="http://www.w3.org/ns/prov#Plan">plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EmissionCalculationActivity">
+      <h3>Emission Calculation Activity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/peco#EmissionCalculationActivity</p>
+      <div class="comment">
+         <span class="markdown">An activity representing a whole or a part of the carbon emission calculation process.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Activity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EmissionCalculationEntity">
+      <h3>Emission Calculation Entity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/peco#EmissionCalculationEntity</p>
+      <div class="comment">
+         <span class="markdown">A prov:Entitiy representing quantifieble input and output data described as qudt:Quantity that influenced emission calculation process. If this data is produced as a result of some sensor observation it would be also of type sosa:Result.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://qudt.org/2.1/schema/qudt/Quantity" title="https://qudt.org/2.1/schema/qudt/Quantity">Quantity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/prov#Entity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Entity">entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Estimate" title="https://w3id.org/peco#Estimate">Estimate</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EmissionGenerationActivity">
+      <h3>Emission Generation Activity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/peco#EmissionGenerationActivity</p>
+      <div class="comment">
+         <span class="markdown">An activity that produces emissions. For example, training of ML models, driving a car, farming operation, etc. This activity can be represented at differentl levels of abstraction, for example, as a single overarching activity (e.g., factory producion for year 2022) or as a number of smaller activities (e.g., production of a single batch of products).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Activity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasEmmissionScore" title="https://w3id.org/peco#hasEmmissionScore">has emission score</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Estimate">
+      <h3>Estimate<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/peco#Estimate</p>
+      <div class="comment">
+         <span class="markdown">A special type of peco:EmissionCalculationData indicating that values were not meassured precisely (e.g., via sensors) but are based on an estimate produced by a human or machine (e.g., AI prediction)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#EmissionCalculationEntity" title="https://w3id.org/peco#EmissionCalculationEntity">Emission Calculation Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/prov#Plan">
+      <h3>plan<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/prov#Plan</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Entity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Entity">entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#CalculationFormula" title="https://w3id.org/peco#CalculationFormula">Calculation formula</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://qudt.org/2.1/schema/qudt/Quantity">
+      <h3>Quantity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://qudt.org/2.1/schema/qudt/Quantity</p>
+      <div class="comment">
+         <span class="markdown">&lt;p class=\"lm-para\"&gt;A &lt;b&gt;quantity&lt;/b&gt; is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying &lt;b&gt;quantity kind&lt;/b&gt; is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. &lt;/p&gt;
+
+&lt;p class=\"lm-para\"&gt;In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points, velocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure.
+
+&lt;p class=\"lm-para\"&gt;Many &lt;b&gt;quantity kinds&lt;/b&gt; are related to each other by various physical laws, and as a result, the associated units of some quantity kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance divided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded as \"fundamental\" in this sense.&lt;/p&gt;
+&lt;p class=\"lm-para\"&gt;A quantity is distinguished from a \"quantity kind\" in that the former carries a value and the latter is a type specifier.&lt;/p&gt;</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#EmissionCalculationEntity" title="https://w3id.org/peco#EmissionCalculationEntity">Emission Calculation Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://qudt.org/schema/qudt/hasQuantityKind" title="http://qudt.org/schema/qudt/hasQuantityKind">has quantity kind</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit">unit</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasEmmissionScore" title="https://w3id.org/peco#hasEmmissionScore">has emission score</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://qudt.org/2.1/schema/qudt/Unit">
+      <h3>Unit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://qudt.org/2.1/schema/qudt/Unit</p>
+      <div class="comment">
+         <span class="markdown">A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\(Q = nU\\).</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit">unit</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasEmmissionScore" title="https://w3id.org/peco#hasEmmissionScore">has emission score</a>
+      </li>
+      <li>
+         <a href="#http://qudt.org/schema/qudt/hasQuantityKind" title="http://qudt.org/schema/qudt/hasQuantityKind">has quantity kind</a>
+      </li>
+      <li>
+         <a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit">unit</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasEmmissionScore">
+      <h3>has emission score<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/peco#hasEmmissionScore</p>
+      <div class="comment">
+         <span class="markdown">A property linking peco:EmissionGenerationActivity with a quantifiable representation of the amount of emissions prodcued by this activity.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#EmissionGenerationActivity" title="https://w3id.org/peco#EmissionGenerationActivity">Emission Generation Activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://qudt.org/2.1/schema/qudt/Quantity" title="https://qudt.org/2.1/schema/qudt/Quantity">Quantity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://qudt.org/schema/qudt/hasQuantityKind">
+      <h3>has quantity kind<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://qudt.org/schema/qudt/hasQuantityKind</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://qudt.org/2.1/schema/qudt/Quantity" title="https://qudt.org/2.1/schema/qudt/Quantity">Quantity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://qudt.org/2.1/schema/qudt/QuantityKind"
+                  target="_blank"
+                  title="https://qudt.org/2.1/schema/qudt/QuantityKind">quantity kind</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://qudt.org/schema/qudt/unit">
+      <h3>unit<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://qudt.org/schema/qudt/unit</p>
+      <div class="comment">
+         <span class="markdown">A reference to the unit of measure of a quantity (variable or constant) of interest.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://qudt.org/2.1/schema/qudt/Quantity" title="https://qudt.org/2.1/schema/qudt/Quantity">Quantity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://qudt.org/2.1/schema/qudt/Unit" title="https://qudt.org/2.1/schema/qudt/Unit">Unit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#EmissionScore" title="https://w3id.org/peco#EmissionScore">Emission Score</a>
+      </li>
+   </ul>
+   <div class="entity" id="EmissionScore">
+      <h3>Emission Score<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/peco#EmissionScore</p>
+      <div class="comment">
+         <span class="markdown">The result of the peco:EmissionCalculationActivity representing the carbon emissions produced by the linked peco:EmissionGenerationActivity.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="https://qudt.org/2.1/schema/qudt/QuantityKind"
+               target="_blank"
+               title="https://qudt.org/2.1/schema/qudt/QuantityKind">quantity kind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
