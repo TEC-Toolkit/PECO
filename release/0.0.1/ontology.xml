@@ -22,7 +22,7 @@
         <terms:creator rdf:nodeID="genid2"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:creator rdf:nodeID="genid4"/>
-        <terms:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:modified xml:lang="en">March 9th, 2023</terms:modified>
         <vann:preferredNamespacePrefix xml:lang="en">peco</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/peco#</vann:preferredNamespaceUri>

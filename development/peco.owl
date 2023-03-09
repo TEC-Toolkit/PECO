@@ -28,7 +28,7 @@
                                     foaf:name "Stefano Germano"@en;
                                     org:memberOf <https://www.cs.ox.ac.uk#this>.
                                   ];
-                         <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/2.0/> ;
+                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "peco"@en ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/peco#" ;
                          owl:versionInfo "0.0.1"@en .

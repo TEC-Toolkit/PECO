@@ -16,7 +16,7 @@ _:genid3 <http://www.w3.org/ns/org#memberOf> <https://www.abdn.ac.uk/#this> .
 <https://w3id.org/peco> <http://purl.org/dc/terms/creator> _:genid4 .
 _:genid4 <http://xmlns.com/foaf/0.1/name> "Stefano Germano"@en .
 _:genid4 <http://www.w3.org/ns/org#memberOf> <https://www.cs.ox.ac.uk#this> .
-<https://w3id.org/peco> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/2.0/> .
+<https://w3id.org/peco> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://w3id.org/peco> <http://purl.org/dc/terms/modified> "March 9th, 2023"@en .
 <https://w3id.org/peco> <http://purl.org/vocab/vann/preferredNamespacePrefix> "peco"@en .
 <https://w3id.org/peco> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/peco#" .

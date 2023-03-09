@@ -192,7 +192,7 @@
     "@id" : "_:genid4"
   } ],
   "http://purl.org/dc/terms/license" : [ {
-    "@id" : "http://creativecommons.org/licenses/by/2.0/"
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@language" : "en",
