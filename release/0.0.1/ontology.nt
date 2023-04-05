@@ -12,10 +12,10 @@ _:genid2 <http://xmlns.com/foaf/0.1/name> "Daniel Garijo"@en .
 _:genid2 <http://www.w3.org/ns/org#memberOf> <https://www.upm.es#this> .
 <https://w3id.org/peco> <http://purl.org/dc/terms/creator> _:genid3 .
 _:genid3 <http://xmlns.com/foaf/0.1/name> "Milan Markovic"@en .
-_:genid3 <http://www.w3.org/ns/org#memberOf> <https://www.abdn.ac.uk/#this> .
+_:genid3 <http://www.w3.org/ns/org#memberOf> <https://www.abdn.ac.uk#this> .
 <https://w3id.org/peco> <http://purl.org/dc/terms/creator> _:genid4 .
 _:genid4 <http://xmlns.com/foaf/0.1/name> "Stefano Germano"@en .
-_:genid4 <http://www.w3.org/ns/org#memberOf> <https://www.cs.ox.ac.uk#this> .
+_:genid4 <http://www.w3.org/ns/org#memberOf> <https://www.ox.ac.uk#this> .
 <https://w3id.org/peco> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://w3id.org/peco> <http://purl.org/dc/terms/modified> "March 9th, 2023"@en .
 <https://w3id.org/peco> <http://purl.org/vocab/vann/preferredNamespacePrefix> "peco"@en .
@@ -213,17 +213,17 @@ _:genid4 <http://www.w3.org/ns/org#memberOf> <https://www.cs.ox.ac.uk#this> .
 <https://w3id.org/peco#EmissionScore> <http://www.w3.org/2000/01/rdf-schema#comment> "The result of the peco:EmissionCalculationActivity representing the carbon emissions produced by the linked peco:EmissionGenerationActivity." .
 <https://w3id.org/peco#EmissionScore> <http://www.w3.org/2000/01/rdf-schema#label> "Emission Score" .
 #
-# https://www.abdn.ac.uk/#this
-<https://www.abdn.ac.uk/#this> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://www.abdn.ac.uk/#this> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
-<https://www.abdn.ac.uk/#this> <http://xmlns.com/foaf/0.1/homepage> "https://www.abdn.ac.uk/" .
-<https://www.abdn.ac.uk/#this> <http://xmlns.com/foaf/0.1/name> "University of Aberdeen" .
+# https://www.abdn.ac.uk#this
+<https://www.abdn.ac.uk#this> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.abdn.ac.uk#this> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<https://www.abdn.ac.uk#this> <http://xmlns.com/foaf/0.1/homepage> "https://www.abdn.ac.uk" .
+<https://www.abdn.ac.uk#this> <http://xmlns.com/foaf/0.1/name> "University of Aberdeen" .
 #
-# https://www.cs.ox.ac.uk#this
-<https://www.cs.ox.ac.uk#this> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://www.cs.ox.ac.uk#this> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
-<https://www.cs.ox.ac.uk#this> <http://xmlns.com/foaf/0.1/homepage> "https://www.cs.ox.ac.uk" .
-<https://www.cs.ox.ac.uk#this> <http://xmlns.com/foaf/0.1/name> "University of Oxford" .
+# https://www.ox.ac.uk#this
+<https://www.ox.ac.uk#this> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.ox.ac.uk#this> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<https://www.ox.ac.uk#this> <http://xmlns.com/foaf/0.1/homepage> "https://www.ox.ac.uk" .
+<https://www.ox.ac.uk#this> <http://xmlns.com/foaf/0.1/name> "University of Oxford" .
 #
 # https://www.open.ac.uk#this
 <https://www.open.ac.uk#this> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
