@@ -244,8 +244,8 @@
         "IRI-based" : "this"
       }
     }, {
-      "iri" : "https://www.abdn.ac.uk/#this",
-      "baseIri" : "https://www.abdn.ac.uk/",
+      "iri" : "https://www.abdn.ac.uk#this",
+      "baseIri" : "https://www.abdn.ac.uk",
       "annotations" : {
         "name" : [ {
           "identifier" : "name",
@@ -256,7 +256,7 @@
         "homepage" : [ {
           "identifier" : "homepage",
           "language" : "undefined",
-          "value" : "https://www.abdn.ac.uk/",
+          "value" : "https://www.abdn.ac.uk",
           "type" : "label"
         } ]
       },
