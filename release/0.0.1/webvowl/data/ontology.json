@@ -264,8 +264,8 @@
         "IRI-based" : "this"
       }
     }, {
-      "iri" : "https://www.cs.ox.ac.uk#this",
-      "baseIri" : "https://www.cs.ox.ac.uk",
+      "iri" : "https://www.ox.ac.uk#this",
+      "baseIri" : "https://www.ox.ac.uk",
       "annotations" : {
         "name" : [ {
           "identifier" : "name",
@@ -276,7 +276,7 @@
         "homepage" : [ {
           "identifier" : "homepage",
           "language" : "undefined",
-          "value" : "https://www.cs.ox.ac.uk",
+          "value" : "https://www.ox.ac.uk",
           "type" : "label"
         } ]
       },
