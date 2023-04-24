@@ -1,61 +1,36 @@
 @prefix : <https://w3id.org/peco#> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix org: <http://www.w3.org/ns/org#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://w3id.org/peco> .
 
 <https://w3id.org/peco> rdf:type owl:Ontology ;
-                         owl:versionIRI <https://w3id.org/peco/0.0.1> ;
+                         owl:versionIRI <https://w3id.org/peco/0.0.2> ;
                          <http://purl.org/dc/elements/1.1/description> "This ontology defines a vocabulary for describing provenance traces of carbon emission calculations by capturing the quantifiable measurements of carbon emission sources used by some activities (e.g., electricity used by a machinery to produce a product, petrol used to make a car journey, etc.) and emission conversion factors used to estimate the carbon emissions produced by these. In addition, the ontology provides the ability to capture various data transformations that occurred before energy estimates may be used with relevant conversion factors. For example, sensors may provide raw readings about a water flow of an irrigation rig in an agri-food operation which is then used as a proxy to estimate the total volume of fertilisers used."@en ;
                          <http://purl.org/dc/elements/1.1/title> "The Provenance of Emission Calculations Ontology"@en ;
-                         <http://purl.org/dc/terms/abstract> """With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to enhance the transparency of the carbon footprint calculations via detailed provenance traces."""@en ;
-                         <http://purl.org/dc/terms/created> "November 15th, 2022"@en ;
-                         <http://purl.org/dc/terms/modified>  "March 9th, 2023"@en;
-                         <http://purl.org/dc/terms/creator> [
-                                    foaf:name "Daniel Garijo"@en;
-                                    org:memberOf <https://www.upm.es#this>.
-                                  ] ,[
-                                    foaf:name "Iman Naja"@en;
-                                    org:memberOf <https://www.open.ac.uk#this>.
-                                   ], [
-                                    foaf:name "Milan Markovic"@en;
-                                    org:memberOf <https://www.abdn.ac.uk#this>.
-                                  ],[
-                                    foaf:name "Stefano Germano"@en;
-                                    org:memberOf <https://www.ox.ac.uk#this>.
-                                  ];
+                         <http://purl.org/dc/terms/abstract> "With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to enhance the transparency of the carbon footprint calculations via detailed provenance traces."@en ;
+                         <http://purl.org/dc/terms/created> "April 24th, 2023"@en ;
+                         <http://purl.org/dc/terms/creator> [ org:memberOf <https://www.abdn.ac.uk#this> ;
+                                                              foaf:name "Milan Markovic"@en
+                                                            ] ,
+                                                            [ org:memberOf <https://www.open.ac.uk#this> ;
+                                                              foaf:name "Iman Naja"@en
+                                                            ] ,
+                                                            [ org:memberOf <https://www.upm.es#this> ;
+                                                              foaf:name "Daniel Garijo"@en
+                                                            ] ,
+                                                            [ org:memberOf <https://www.ox.ac.uk#this> ;
+                                                              foaf:name "Stefano Germano"@en
+                                                            ] ;
                          <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                         <http://purl.org/dc/terms/modified> "April 24th, 2023"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "peco"@en ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/peco#" ;
-                         owl:versionInfo "0.0.1"@en .
-
- #################################################################
- #    Organization Metadata.
- #################################################################
-
-<https://www.upm.es#this> a foaf:Organization;
-  a foaf:Organization ;
-  foaf:name "Universidad Politécnica de Madrid";
-  foaf:homepage "https://www.upm.es" .
-
-<https://www.open.ac.uk#this> a foaf:Organization;
-  a foaf:Organization ;
-  foaf:name "The Open University";
-  foaf:homepage "https://www.open.ac.uk" .
-
-<https://www.abdn.ac.uk#this> a foaf:Organization;
-  a foaf:Organization ;
-  foaf:name "University of Aberdeen";
-  foaf:homepage "https://www.abdn.ac.uk" .
-
-<https://www.ox.ac.uk#this> a foaf:Organization;
-  a foaf:Organization ;
-  foaf:name "University of Oxford";
-  foaf:homepage "https://www.ox.ac.uk" .
+                         owl:versionInfo "0.0.2"@en .
 
 #################################################################
 #    Annotation properties
@@ -89,6 +64,10 @@
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
 
@@ -100,6 +79,18 @@
 ###  http://www.w3.org/2008/05/skos#prefLabel
 <http://www.w3.org/2008/05/skos#prefLabel> rdf:type owl:AnnotationProperty ;
                                            rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/ns/org#memberOf
+org:memberOf rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+foaf:homepage rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -153,6 +144,14 @@ rdf:HTML rdf:type rdfs:Datatype .
                    rdfs:label "has emission score" .
 
 
+###  https://w3id.org/peco#inEmissionActivityContext
+:inEmissionActivityContext rdf:type owl:ObjectProperty ;
+                           rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
+                           rdfs:range :EmissionGenerationActivity ;
+                           rdfs:comment "A property linking peco:EmissionGenerationActivity to sosa:Observation. For example, a machine learning training activity (peco:EmissionGenerationActivity) is linked to electricity monitoring activity (sosa:Observation) that monitors electricity consumption of a GPU (sosa:FeatureOfInterest) used to train the ML model." ;
+                           rdfs:label "in emission activity context" .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -170,6 +169,10 @@ rdf:HTML rdf:type rdfs:Datatype .
                                  rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
 
 
+###  http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class .
+
+
 ###  http://www.w3.org/ns/sosa/Result
 <http://www.w3.org/ns/sosa/Result> rdf:type owl:Class .
 
@@ -178,15 +181,12 @@ rdf:HTML rdf:type rdfs:Datatype .
 <http://www.w3.org/ns/sosa/Sensor> rdf:type owl:Class .
 
 
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class .
+
+
 ###  https://qudt.org/2.1/schema/qudt/Quantity
-<https://qudt.org/2.1/schema/qudt/Quantity> rdf:type owl:Class ;
-                                            rdfs:comment """<p class=\\\"lm-para\\\">A <b>quantity</b> is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying <b>quantity kind</b> is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>
-
-<p class=\\\"lm-para\\\">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points, velocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure.
-
-<p class=\\\"lm-para\\\">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance divided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded as \\\"fundamental\\\" in this sense.</p>
-<p class=\\\"lm-para\\\">A quantity is distinguished from a \\\"quantity kind\\\" in that the former carries a value and the latter is a type specifier.</p>""" ;
-                                            rdfs:label "Quantity" .
+<https://qudt.org/2.1/schema/qudt/Quantity> rdf:type owl:Class .
 
 
 ###  https://qudt.org/2.1/schema/qudt/QuantityKind
@@ -194,16 +194,14 @@ rdf:HTML rdf:type rdfs:Datatype .
 
 
 ###  https://qudt.org/2.1/schema/qudt/Unit
-<https://qudt.org/2.1/schema/qudt/Unit> rdf:type owl:Class ;
-                                        rdfs:comment "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\\\(Q = nU\\\\)." ;
-                                        rdfs:label "Unit" .
+<https://qudt.org/2.1/schema/qudt/Unit> rdf:type owl:Class .
 
 
 ###  https://w3id.org/peco#CalculationFormula
 :CalculationFormula rdf:type owl:Class ;
                     rdfs:subClassOf <http://www.w3.org/ns/prov#Plan> ;
                     rdfs:comment "A generic extension point for defining the formula that was followed by the peco:EmissionCalculationActivity. If no external vocabulary is used to describe the semantics of the formula use rdf:value to provide human readable details of the formula (e.g., energy quantity * converspon factor value)." ;
-                    rdfs:label "Calculation formula" .
+                    rdfs:label "Calculation Formula" .
 
 
 ###  https://w3id.org/peco#EmissionCalculationActivity
@@ -228,22 +226,75 @@ rdf:HTML rdf:type rdfs:Datatype .
                             rdfs:label "Emission Generation Activity" .
 
 
-###  https://w3id.org/peco#Estimate
-:Estimate rdf:type owl:Class ;
-          rdfs:subClassOf :EmissionCalculationEntity ;
-          rdfs:comment "A special type of peco:EmissionCalculationData indicating that values were not meassured precisely (e.g., via sensors) but are based on an estimate produced by a human or machine (e.g., AI prediction)" ;
-          rdfs:label "Estimate" .
+###  https://w3id.org/peco#EmissionScore
+:EmissionScore rdf:type owl:Class ;
+               rdfs:subClassOf :EmissionCalculationEntity ;
+               rdfs:comment "The result of the peco:EmissionCalculationActivity representing the carbon emissions produced by the linked peco:EmissionGenerationActivity." ;
+               rdfs:label "Emission Score" .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  https://w3id.org/peco#EmissionScore
-:EmissionScore rdf:type owl:NamedIndividual ,
-                        <https://qudt.org/2.1/schema/qudt/QuantityKind> ;
-               rdfs:comment "The result of the peco:EmissionCalculationActivity representing the carbon emissions produced by the linked peco:EmissionGenerationActivity." ;
-               rdfs:label "Emission Score" .
+###  https://www.abdn.ac.uk#this
+<https://www.abdn.ac.uk#this> rdf:type owl:NamedIndividual ,
+                                       foaf:Organization ;
+                              foaf:homepage "https://www.abdn.ac.uk" ;
+                              foaf:name "University of Aberdeen" .
 
+
+###  https://www.open.ac.uk#this
+<https://www.open.ac.uk#this> rdf:type owl:NamedIndividual ,
+                                       foaf:Organization ;
+                              foaf:homepage "https://www.open.ac.uk" ;
+                              foaf:name "The Open University" .
+
+
+###  https://www.ox.ac.uk#this
+<https://www.ox.ac.uk#this> rdf:type owl:NamedIndividual ,
+                                     foaf:Organization ;
+                            foaf:homepage "https://www.ox.ac.uk" ;
+                            foaf:name "University of Oxford" .
+
+
+###  https://www.upm.es#this
+<https://www.upm.es#this> rdf:type owl:NamedIndividual ,
+                                   foaf:Organization ;
+                          foaf:homepage "https://www.upm.es" ;
+                          foaf:name "Universidad Politécnica de Madrid" .
+
+
+[ org:memberOf <https://www.abdn.ac.uk#this> ;
+  foaf:name "Milan Markovic"@en
+] .
+
+[ org:memberOf <https://www.open.ac.uk#this> ;
+   foaf:name "Iman Naja"@en
+ ] .
+
+[ org:memberOf <https://www.upm.es#this> ;
+   foaf:name "Daniel Garijo"@en
+ ] .
+
+[ org:memberOf <https://www.ox.ac.uk#this> ;
+   foaf:name "Stefano Germano"@en
+ ] .
+
+[ org:memberOf <https://www.open.ac.uk#this> ;
+   foaf:name "Iman Naja"@en
+ ] .
+
+[ org:memberOf <https://www.upm.es#this> ;
+   foaf:name "Daniel Garijo"@en
+ ] .
+
+[ org:memberOf <https://www.ox.ac.uk#this> ;
+   foaf:name "Stefano Germano"@en
+ ] .
+
+[ org:memberOf <https://www.abdn.ac.uk#this> ;
+   foaf:name "Milan Markovic"@en
+ ] .
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
