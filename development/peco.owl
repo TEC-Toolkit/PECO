@@ -139,7 +139,7 @@ rdf:HTML rdf:type rdfs:Datatype .
 ###  https://w3id.org/peco#hasEmmissionScore
 :hasEmmissionScore rdf:type owl:ObjectProperty ;
                    rdfs:domain :EmissionGenerationActivity ;
-                   rdfs:range <https://qudt.org/2.1/schema/qudt/Quantity> ;
+                   rdfs:range :EmissionScore ;
                    rdfs:comment "A property linking peco:EmissionGenerationActivity with a quantifiable representation of the amount of emissions prodcued by this activity." ;
                    rdfs:label "has emission score" .
 
@@ -162,11 +162,6 @@ rdf:HTML rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/ns/prov#Entity
 <http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/prov#Plan
-<http://www.w3.org/ns/prov#Plan> rdf:type owl:Class ;
-                                 rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
 
 
 ###  http://www.w3.org/ns/sosa/Observation
@@ -195,13 +190,6 @@ foaf:Organization rdf:type owl:Class .
 
 ###  https://qudt.org/2.1/schema/qudt/Unit
 <https://qudt.org/2.1/schema/qudt/Unit> rdf:type owl:Class .
-
-
-###  https://w3id.org/peco#CalculationFormula
-:CalculationFormula rdf:type owl:Class ;
-                    rdfs:subClassOf <http://www.w3.org/ns/prov#Plan> ;
-                    rdfs:comment "A generic extension point for defining the formula that was followed by the peco:EmissionCalculationActivity. If no external vocabulary is used to describe the semantics of the formula use rdf:value to provide human readable details of the formula (e.g., energy quantity * converspon factor value)." ;
-                    rdfs:label "Calculation Formula" .
 
 
 ###  https://w3id.org/peco#EmissionCalculationActivity
