@@ -1,0 +1,116 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns0: <https://w3id.org/peco#> .
+@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns2: <https://w3id.org/ecfo#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<https://github.com/mlco2/impact/provenance/i/Observation/af8e1f8f-f6a1-443a-801a-bebcc1d47c95>
+  a owl:NamedIndividual, prov:Activity, sosa:Observation ;
+  rdfs:label "Observe the duration GPU was used for"^^xsd:string ;
+  prov:wasAssociatedWith <https://www.wikidata.org/entity/Q5> ;
+  sosa:hasFeatureOfInterest <https://github.com/mlco2/impact/provenance/i/FeatureOfInterest/489e5ec3-b016-4f1d-8d3e-62818dd6a879> ;
+  sosa:hasResult <https://github.com/mlco2/impact/provenance/i/CalculationEntity/ObservationResult/509bf757-50c0-4103-ab4f-0eea06ce40b4> ;
+  sosa:madeBySensor <https://www.wikidata.org/entity/Q5> ;
+  ns0:inEmissionActivityContext <https://github.com/mlco2/impact/provenance/i/EmissionGenerationActivity/f1d5c48a-390f-45b5-9c50-c04d28451860> .
+
+<https://github.com/mlco2/impact/provenance/i/FeatureOfInterest/489e5ec3-b016-4f1d-8d3e-62818dd6a879>
+  a owl:NamedIndividual, prov:Entity, sosa:FeatureOfInterest ;
+  rdfs:label "A100 PCIe 40/80GB"^^xsd:string .
+
+<https://github.com/mlco2/impact/provenance/i/CalculationEntity/ObservationResult/509bf757-50c0-4103-ab4f-0eea06ce40b4>
+  a owl:NamedIndividual, ns0:EmissionCalculationEntity, <http://qudt.org/schema/qudt/Quantity>, sosa:Result ;
+  ns1:hasQuantityKind <http://www.wikidata.org/entity/Q3517751> ;
+  ns1:unit <http://www.wikidata.org/entity/Q25235> ;
+  ns1:value 100 ;
+  rdfs:label "Duration of Use"^^xsd:string .
+
+<https://github.com/mlco2/impact/provenance/i/EmissionGenerationActivity/f1d5c48a-390f-45b5-9c50-c04d28451860>
+  a owl:NamedIndividual, prov:Activity, ns0:EmissionGenerationActivity ;
+  rdfs:label "ML model training"^^xsd:string ;
+  prov:atLocation <https://w3id.org/ecfkg/i/mlco2/gcp/europe-west2> ;
+  ns0:hasEmissionScore <https://github.com/mlco2/impact/provenance/i/CalculationEntity/22302e95-8635-4dea-a448-b0ace862409c> ;
+  prov:endedAtTime "2023-03-07T04:00:00"^^xsd:dateTime ;
+  prov:startedAtTime "2023-03-03T00:00:00"^^xsd:dateTime ;
+  prov:wasAssociatedWith <http://example.com#Alice>.
+
+<https://github.com/mlco2/impact/provenance/i/CalculationEntity/22302e95-8635-4dea-a448-b0ace862409c>
+  a owl:NamedIndividual, ns0:EmissionCalculationEntity, ns0:EmissionScore, ns1:Quantity ;
+  ns1:hasQuantityKind <http://www.wikidata.org/entity/Q1933140> ;
+  ns1:unit <http://www.wikidata.org/entity/Q11570> ;
+  ns1:value "5.25E0"^^xsd:float ;
+  rdfs:label "Emission Score"^^xsd:string ;
+  prov:wasGeneratedBy <https://github.com/mlco2/impact/provenance/i/f916f703-49bd-4c4c-a405-bad99282d155> .
+
+<https://github.com/mlco2/impact/provenance/i/CalculationEntity/4ceba953-392e-42a0-a199-39d3be9a45d2>
+  a owl:NamedIndividual, ns0:EmissionCalculationEntity, ns1:Quantity ;
+  ns1:hasQuantityKind <http://www.wikidata.org/entity/Q1053879> ;
+  ns1:unit <http://www.wikidata.org/entity/Q25236> ;
+  ns1:value "250"^^xsd:float ;
+  rdfs:label "Watt Consumption"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1053879> a owl:NamedIndividual, ns1:QuantityKind .
+<http://www.wikidata.org/entity/Q25236> a owl:NamedIndividual, ns1:Unit .
+<http://www.wikidata.org/entity/Q3517751> a owl:NamedIndividual, ns1:QuantityKind .
+<http://www.wikidata.org/entity/Q25235> a owl:NamedIndividual, ns1:Unit .
+<https://github.com/mlco2/impact/provenance/i/CalculationEntity/e867cfb8-7435-4d59-b5f0-cf032ec37fac>
+  a owl:NamedIndividual, ns0:EmissionCalculationEntity, ns1:Quantity ;
+  ns1:hasQuantityKind <http://www.wikidata.org/entity/Q12725> ;
+  ns1:unit <http://www.wikidata.org/entity/Q182098> ;
+  ns1:value "25"^^xsd:float ;
+  rdfs:label "Energy Used"^^xsd:string ;
+  prov:wasGeneratedBy <https://github.com/mlco2/impact/provenance/i/b000651f-e28a-4c6c-8350-3820ff5d8a36> .
+
+<http://www.wikidata.org/entity/Q12725> a owl:NamedIndividual, ns1:QuantityKind .
+<http://www.wikidata.org/entity/Q182098> a owl:NamedIndividual, ns1:Unit .
+<https://github.com/mlco2/impact/provenance/i/b000651f-e28a-4c6c-8350-3820ff5d8a36>
+  a owl:NamedIndividual, prov:Activity, ns0:EmissionCalculationActivity ;
+  rdfs:label "Estimate Electricity Use in kW/h"^^xsd:string ;
+  prov:used <https://github.com/mlco2/impact/provenance/i/CalculationEntity/4ceba953-392e-42a0-a199-39d3be9a45d2>, <https://github.com/mlco2/impact/provenance/i/CalculationEntity/ObservationResult/509bf757-50c0-4103-ab4f-0eea06ce40b4> ;
+  prov:wasAssociatedWith <https://github.com/TEC-Toolkit/Semantic_Machine_Learning_Impact_Calculator> .
+
+<https://github.com/mlco2/impact/provenance/i/f916f703-49bd-4c4c-a405-bad99282d155>
+  a owl:NamedIndividual, prov:Activity, ns0:EmissionCalculationActivity ;
+  rdfs:label "Emission Score Calculation"^^xsd:string ;
+  prov:used <https://github.com/mlco2/impact/provenance/i/CalculationEntity/e867cfb8-7435-4d59-b5f0-cf032ec37fac>, <https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1826> ;
+  prov:wasAssociatedWith <https://github.com/TEC-Toolkit/Semantic_Machine_Learning_Impact_Calculator> .
+
+<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1826>
+  a <https://w3id.org/ecfo#EmissionConversionFactor> ;
+  rdf:value "0.21233"^^xsd:string ;
+  rdfs:label "Electricity: UK"@en ;
+  prov:wasDerivedFrom "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1049334/conversion-factors-2021-flat-file-automatic-processing.xls"^^xsd:string ;
+  ns2:hasApplicableLocation <http://www.wikidata.org/entity/Q145> ;
+  ns2:hasApplicablePeriod <https://w3id.org/ecfkg/i/UK/BEIS/2021/applicablePeriod/2021-01-01T00%3A00%3A00/2021-12-31T23%3A59%3A59> ;
+  ns2:hasEmissionSource <https://w3id.org/ecfkg/i/Electricity_generated_Electricity_UK> ;
+  ns2:hasEmissionTarget <http://www.wikidata.org/entity/Q1933140> ;
+  ns2:hasSourceUnit <http://www.wikidata.org/entity/Q182098> ;
+  ns2:hasTag <https://w3id.org/ecfkg/i/UK%20electricity>, <https://w3id.org/ecfkg/i/Electricity%20generated>, <https://w3id.org/ecfkg/i/Electricity%3A%20UK> ;
+  ns2:hasTargetUnit <http://www.wikidata.org/entity/Q11570> ;
+  ns0:publisher "https://w3id.org/ecfkg/i/Organization/BEIS"^^xsd:string ;
+  ns0:scope ns2:Scope2 .
+
+<http://www.wikidata.org/entity/Q1933140> a owl:NamedIndividual, ns1:QuantityKind .
+<http://www.wikidata.org/entity/Q11570> a owl:NamedIndividual, ns1:Unit .
+<https://w3id.org/ecfkg/i/UK/BEIS/2021/applicablePeriod/2021-01-01T00%3A00%3A00/2021-12-31T23%3A59%3A59>
+  time:hasBeginning <https://w3id.org/ecfkg/i/UK/BEIS/2021/applicablePeriod/2021-01-01T00%3A00%3A00/2021-12-31T23%3A59%3A59/start> ;
+  time:hasEnd <https://w3id.org/ecfkg/i/UK/BEIS/2021/applicablePeriod/2021-01-01T00%3A00%3A00/2021-12-31T23%3A59%3A59/end> .
+
+<https://w3id.org/ecfkg/i/UK/BEIS/2021/applicablePeriod/2021-01-01T00%3A00%3A00/2021-12-31T23%3A59%3A59/start>
+  a time:Instant ;
+  time:inXSDDate "2021-01-01T00:00:00"^^xsd:dateTime .
+
+<https://w3id.org/ecfkg/i/UK/BEIS/2021/applicablePeriod/2021-01-01T00%3A00%3A00/2021-12-31T23%3A59%3A59/end>
+  a time:Instant ;
+  time:inXSDDate "2021-12-31T23:59:59"^^xsd:dateTime .
+  
+<http://example.com#Alice>
+  a prov:Person .
+  
+<https://github.com/TEC-Toolkit/Semantic_Machine_Learning_Impact_Calculator> 
+  a prov:SoftwareAgent ;
+  prov:actedOnBehalfOf <http://example.com#Alice> .

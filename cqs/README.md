@@ -4,275 +4,245 @@ The list of PECO competency questions.
 
 ## SPARQL queries used for implementing the CQs
 
-Using the example provenance trace available at:
+To test the CQs use the provenance_trace.ttl and https://raw.githubusercontent.com/TEC-Toolkit/cfkg/main/wikidata_labels/wikidata_labels.ttl 
 
-> https://sparql.cf.linkeddata.es
 
-The trace is an output of the prototype ML Learning Impact calculator 
-
-### CQ1: What are the emissions of this activity (e.g., training an ML model)?
+### CQ1: What are the emissions of an activity (e.g., training a model)?
 
 ```sparql
+Select ?activityL ?score
 
+Where {
+    ?activity  rdf:type   peco:EmissionGenerationActivity ;
+               rdfs:label ?activityL;
+               peco:hasEmissionScore/qudt:value ?score. 
+    
+}
 ```
 
 #### Answer
 
-| source |
-|-|
-| Gaseous_fuels_Butane |
+| activityL | score |
+|-|-|
+| ML model training | "5.25E0"^^xsd:float |
 
 ### CQ2: Who was responsible for the activity that produced emissions?
 
 
 
 ```sparql
+Select ?agent
 
-```
-
-#### Answer
-
-| unit |
-|-|
-| kilowatt hour |
-
-### CQ3: What is the target chemical compound of a conversion factor?
-
-(e.g., CO2e)
-
-```sparql
-SELECT ?target
-WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasEmissionTarget>/rdfs:label ?target
+Where {
+    ?activity  rdf:type   peco:EmissionGenerationActivity ;
+               prov:wasassociatedWith ?agent. 
+    
 }
 ```
 
 #### Answer
 
-| target |
+| agent |
 |-|
-| carbon dioxide equivalent |
+| http://example.com#Alice |
 
-### CQ4: What are the units of the chemical compound produced by the emission source?
+### CQ3: What are the emissions of the activities I was responsible for in a specific year?
 
-(e.g., kg of CO2e, where the unit is Kg)
+
 
 ```sparql
-SELECT ?unit
-WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasTargetUnit>/rdfs:label ?unit
+Select ?activityLabel ?score
+
+Where {
+    ?activity a peco:EmissionGenerationActivity;
+              rdfs:label ?activityLabel;
+              peco:hasEmissionScore/qudt:value ?score;
+              prov:startedAtTime ?start;
+              prov:endedAtTime ?end.
+    
+    FILTER (?start > "2023-01-01T00:00:00"^^xsd:dateTime)
+    FILTER (?end < "2023-12-31T23:59:00"^^xsd:dateTime)
 }
 ```
 
 #### Answer
 
-| unit |
-|-|
-| Kilogram |
+| activityLabel | score|
+|-|-|
+| ML model training |"5.25E0"^^xsd:float|
 
+### CQ4: What Emission Conversion Factor was used to calculate the emissions of this activity?
 
-### CQ5: What is the applicable region of this conversion factor?
-
-(i.e., the region that applies to this CF, like burning tonnes of butane in UK)
 
 ```sparql
-SELECT ?location
-WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasApplicableLocation> ?location
+Select ?ecf
+
+Where {
+    ?activity  rdf:type   peco:EmissionCalculationActivity ;
+               prov:used ?ecf. 
+    ?ecf a ecfo:EmissionConversionFactor.
+    ?emissionScore a peco:EmissionScore;
+                   prov:wasGeneratedBy ?activity.
+}
+
+```
+
+#### Answer
+
+| ecf |
+|-|
+| https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1826 |
+
+
+### CQ5: What different steps did the emission calculation process include?
+
+
+
+```sparql
+Select ?activityLabel 
+
+Where {
+    ?activity  rdf:type   peco:EmissionCalculationActivity ;
+               rdfs:label  ?activityLabel.
 }
 ```
 
 #### Answer
 
-| location |
+| activityLabel |
 |-|
-| https://www.wikidata.org/wiki/Q145 (United Kingdom) |
+| Estimate Electricity Use in kW/h |
+| Emission Score Calculation |
 
-### CQ6: What is the applicable period for this conversion factor?
+### CQ6: Who was responsible for calculating the emissions?
 
-(e.g., in the UK they are released in a year basis)
+
 
 ```sparql
-SELECT ?start ?end
-WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasApplicablePeriod> ?t.
-?t <http://www.w3.org/2006/time#hasBeginning>/<http://www.w3.org/2006/time#inXSDDate> ?start.
-?t <http://www.w3.org/2006/time#hasEnd>/<http://www.w3.org/2006/time#inXSDDate> ?end
+Select ?activityL ?software ?agent
+
+Where {
+    ?activity  rdf:type   peco:EmissionCalculationActivity ;
+               prov:wasAssociatedWith ?software; 
+               rdfs:label ?activityL.
+    ?software prov:actedOnBehalfOf ?agent.
 }
+
 ```
 Answer:
 
-| start | end |
-|-|-|
-| 2021-01-01T00:00:00 | 2021-12-31T23:59:59 |
+| activityL | software |agent|
+|-|-|-|
+| Emission Score Calculation | https://github.com/TEC-Toolkit/Semantic_Machine_Learning_Impact_Calculator |http://example.com#Alice|
+| Estimate Electricity Use in kW/h | https://github.com/TEC-Toolkit/Semantic_Machine_Learning_Impact_Calculator |http://example.com#Alice|
 
-### CQ7: How has a conversion factor varied through the years for a given region?
-
-For this SPARQL query we switch to CNG, because Butane is not available in many years.
-We also focus only on the "Net CV" value (there are other conversion factors for "Gross CV").
+### CQ7: What outputs and in what quantities did the emission calculation process use to generate the emission score?
 
 ```sparql
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-SELECT ?cf ?value ?start ?end ?context
-WHERE {
-    <https://w3id.org/ecfkg/i/UK/BEIS/2020/CF_1> <https://w3id.org/ecfo#hasEmissionSource> ?e;
-    <https://w3id.org/ecfo#hasEmissionTarget> ?t.
-   ?cf <https://w3id.org/ecfo#hasEmissionSource> ?e;
-     <https://w3id.org/ecfo#hasEmissionTarget> ?t;
-    <https://w3id.org/ecfo#hasAdditionalContext> ?context;
-    <https://w3id.org/ecfo#hasApplicableLocation> ?region;
-    rdf:value ?value;
-    <https://w3id.org/ecfo#hasScope> <https://w3id.org/ecfo#Scope1> ;
-    <https://w3id.org/ecfo#hasApplicablePeriod> ?period.
- ?period <http://www.w3.org/2006/time#hasBeginning>/<http://www.w3.org/2006/time#inXSDDate> ?start;
-         <http://www.w3.org/2006/time#hasEnd>/<http://www.w3.org/2006/time#inXSDDate> ?end
-  filter(regex(?context,"Net cv","i"))
+Select ?activityLabel ?outputLabel ?outputValue ?outputUnitLabel ?outputQuantityKindL
+
+Where {
+    ?activity  rdf:type   peco:EmissionCalculationActivity ;
+               rdfs:label  ?activityLabel.
+    ?output prov:wasGeneratedBy ?activity.
+    
+    ?output     rdf:type              peco:EmissionCalculationEntity ;
+               rdfs:label            ?outputLabel ;
+               qudt:value            ?outputValue ;
+               qudt:hasQuantityKind/rdfs:label   ?outputQuantityKindL;
+               qudt:unit/qudt:abbreviation       ?outputUnitLabel .
+             
+    FILTER ( lang(?outputUnitLabel) = "en" )
+    
 }
 ```
 
 #### Answer
 
-| cf  | value  | start  | end  | context  | scope  |
-|---|---|---|---|---|---|
-| https://w3id.org/ecfkg/i/UK/BEIS/2022/CF_2393  | 0.04282 | 2022-01-01T00:00:00 | 2022-12-31T23:59:59 | Net CV  | https://w3id.org/ecfo#Scope3  |
-| https://w3id.org/ecfkg/i/UK/BEIS/2022/CF_25  | 0.20227 | 2022-01-01T00:00:00 | 2022-12-31T23:59:59 | Net CV  | https://w3id.org/ecfo#Scope1  |
-| https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_21  | 0.20297 | 2021-01-01T00:00:00 | 2021-12-31T23:59:59 | Energy - Net CV  | https://w3id.org/ecfo#Scope1  |
-| https://w3id.org/ecfkg/i/UK/BEIS/2020/CF_5  | 0.20374 | 2020-01-01T00:00:00 | 2020-12-31T23:59:59 | Energy - Net CV  | https://w3id.org/ecfo#Scope1  |
-| https://w3id.org/ecfkg/i/UK/BEIS/2019/CF_5  | 0.20428 | 2019-01-01T00:00:00 | 2019-12-31T23:59:59 | Energy - Net CV  | https://w3id.org/ecfo#Scope1  |
+| activityLabel | outputLabel | outputValue | outputUnitLabel | outputQuantityKindL
+|-|-|-|-|-|
+| Estimate Electricity Use in kW/h | Energy Used| "25"^^xsd:float| "kWh"@en| "electricity"@en |
+| Emission Score Calculation | Emission Score| "5.25E0"^^xsd:float| "kg"@en| "carbon dioxide equivalent"@en |
 
 We can see the evolution of the conversion factor for five years. For one of the years there are two conversion factors for the same materials,
 
-### CQ8: Who is the publisher of the conversion factor?
+### CQ8: What inputs and in what quantities did the emission calculation process use to generate the emission score?
 
 ```sparql
-SELECT ?publisher
-WHERE {
-    <https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> dc:publisher ?publisher.
+Select ?activityLabel ?inputLabel ?inputValue ?inputUnitLabel ?inputQuantityKindL
+
+Where {
+    ?activity  rdf:type   peco:EmissionCalculationActivity ;
+               rdfs:label  ?activityLabel ;
+               prov:used   ?input.
+    {
+    ?input     rdf:type              peco:EmissionCalculationEntity ;
+               rdfs:label            ?inputLabel ;
+               qudt:value            ?inputValue ;
+               qudt:hasQuantityKind/rdfs:label   ?inputQuantityKindL;
+               qudt:unit/qudt:abbreviation       ?inputUnitLabel .
+             
+    FILTER ( lang(?inputUnitLabel) = "en" )
+    }
+    UNION
+      { 
+       #look for Emission conversion factors too
+        ?input  rdf:value  ?inputValue .
+        ?input ecfo:hasTargetUnit/qudt:abbreviation ?inputUnitLabel .
+        ?input ecfo:hasEmissionTarget/rdfs:label ?inputQuantityKindL .
+        ?input rdfs:label  ?inputLabel
+        FILTER ( lang(?inputQuantityKindL) = "en" )
+      }
+}
+
+```
+
+#### Answer
+
+| activityLabel | inputLabel | inputValue | inputUnitLabel | inputQuantityKindL
+|-|-|-|-|-|
+| Estimate Electricity Use in kW/h | Duration of Use| "100"^^xsd:integer| "h"@en| "time"@en |
+| Estimate Electricity Use in kW/h | Watt Consumption| "250"^^xsd:float| "W"@en| "thermal design power"@en |
+| Emission Score Calculation | Energy Used| "25"^^xsd:float| "kWh"@en| "electricity"@en |
+| Emission Score Calculation | Electricity: UK| "0.21233"| "kg"@en| "carbon dioxide equivalent"@en |
+
+
+### CQ9: What entity (e.g, hardware consuming electricity) was used to transform the emission source into emissions?
+
+For example, a hardware (e.g., GPU) that used electricity.
+
+```sparql
+Select ?foi
+Where
+{
+    ?activity a peco:EmissionGenerationActivity.
+    ?observation peco:inEmissionActivityContext ?activity;
+                 sosa:hasFeatureOfInterest/rdfs:label ?foi.
+    
 }
 ```
 
 #### Answer
 
-| publisher |
+| foi |
 |-|
-| https://w3id.org/ecfkg/i/Organization/BEIS |
+| A100 PCIe 40/80GB |
 
-### CQ9: Does this conversion factor need additional context?
-
-(for example, butane is measured as net, not gross value)
+### CQ10: What is the location associated with the activity that produced emissions?
 
 ```sparql
-SELECT ?context
-WHERE {
-    <https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasAdditionalContext> ?context.
-}
-```
-
-#### Answer
-
-| context |
-|-|
-| Energy - Gross CV |
-
-### CQ10: Do any other conversion factors convert from the emission source to the target emission?
-
-```sparql
-SELECT ?cf ?context
-WHERE {
-    <https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasEmissionSource> ?e;
-    <https://w3id.org/ecfo#hasEmissionTarget> ?t.
-   ?cf <https://w3id.org/ecfo#hasEmissionSource> ?e;
-     <https://w3id.org/ecfo#hasEmissionTarget> ?t;
-    <https://w3id.org/ecfo#hasAdditionalContext> ?context.
+Select ?location 
+Where
+{
+    ?activity a peco:EmissionGenerationActivity;
+                prov:atLocation ?location.
 }
 ```
 
 Answer:
-| cf | context |
-|-|-|
-| https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1 | Energy - Gross CV |
-| https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_13 | Tonnes |
-| https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_5 | Energy - Net CV |
-| https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_9 | Volume |
-
-
-### CQ11: Are there any descriptive tags associated with the source material of a conversion factor?
-
-```sparql
-SELECT ?tag
-WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasTag>/rdfs:label ?tag
-}
-```
-
-#### Answer
-
-| tag |
+| location |
 |-|
-| Butane |
-| Fuels |
-| Gaseous fuels |
+| https://w3id.org/ecfkg/i/mlco2/gcp/europe-west2 | 
 
-### CQ12: Are there any usage notes or disclaimers associated with a conversion factor?
 
-```sparql
-SELECT ?notes
-WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasUsageNotes> ?notes
-}
-```
 
-#### Answer
-
-| notes |
-|-|
-| empty (no disclaimers) |
-
-### CQ13: What is the value of a conversion factor?
-
-```sparql
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-SELECT ?value
-WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> rdf:value ?value
-}
-```
-
-#### Answer
-
-| value |
-|-|
-| "0.2224"^^xsd:float |
-
-### CQ14: What is the molecular formula associated with the target emission?
-
-```sparql
-SELECT ?formula
-WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasEmissionTarget>/<https://schema.org/molecularFormula> ?formula
-}
-```
-
-#### Answer
-
-| formula |
-|-|
-| CO2e |
-
-### CQ15: What is the symbol used in the source and target units?
-
-```sparql
-prefix ecfo: <https://w3id.org/ecfo#>
-prefix qudt: <http://qudt.org/schema/qudt/>
-SELECT ?source ?target
-WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> ecfo:hasSourceUnit/qudt:abbreviation ?source;
- ecfo:hasTargetUnit/qudt:abbreviation ?target;
-}
-```
-
-#### Answer
-
-| source | target |
-|-|-|
-| kW.h | kg |

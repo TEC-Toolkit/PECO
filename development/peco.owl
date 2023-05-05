@@ -14,23 +14,15 @@
                          <http://purl.org/dc/elements/1.1/title> "The Provenance of Emission Calculations Ontology"@en ;
                          <http://purl.org/dc/terms/abstract> "With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to enhance the transparency of the carbon footprint calculations via detailed provenance traces."@en ;
                          <http://purl.org/dc/terms/created> "April 24th, 2023"@en ;
-                         <http://purl.org/dc/terms/creator> [ org:memberOf <https://www.abdn.ac.uk#this> ;
-                                                              foaf:name "Milan Markovic"@en
-                                                            ] ,
-                                                            [ org:memberOf <https://www.open.ac.uk#this> ;
-                                                              foaf:name "Iman Naja"@en
-                                                            ] ,
-                                                            [ org:memberOf <https://www.upm.es#this> ;
-                                                              foaf:name "Daniel Garijo"@en
-                                                            ] ,
-                                                            [ org:memberOf <https://www.ox.ac.uk#this> ;
-                                                              foaf:name "Stefano Germano"@en
-                                                            ] ;
-                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                         <http://purl.org/dc/terms/modified> "April 24th, 2023"@en ;
-                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "peco"@en ;
-                         <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/peco#" ;
-                         owl:versionInfo "0.0.2"@en .
+                         <http://purl.org/dc/terms/creator> [ ] ,
+[ ] ,
+[ ] ,
+[ ] ;
+<http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+<http://purl.org/dc/terms/modified> "April 24th, 2023"@en ;
+<http://purl.org/vocab/vann/preferredNamespacePrefix> "peco"@en ;
+<http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/peco#" ;
+owl:versionInfo "0.0.2"@en .
 
 #################################################################
 #    Annotation properties
@@ -136,12 +128,12 @@ rdf:HTML rdf:type rdfs:Datatype .
 <http://www.w3.org/ns/sosa/phenomenonTime> rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/peco#hasEmmissionScore
-:hasEmmissionScore rdf:type owl:ObjectProperty ;
-                   rdfs:domain :EmissionGenerationActivity ;
-                   rdfs:range :EmissionScore ;
-                   rdfs:comment "A property linking peco:EmissionGenerationActivity with a quantifiable representation of the amount of emissions prodcued by this activity." ;
-                   rdfs:label "has emission score" .
+###  https://w3id.org/peco#hasEmissionScore
+:hasEmissionScore rdf:type owl:ObjectProperty ;
+                  rdfs:domain :EmissionGenerationActivity ;
+                  rdfs:range :EmissionScore ;
+                  rdfs:comment "A property linking peco:EmissionGenerationActivity with a quantifiable representation of the amount of emissions prodcued by this activity." ;
+                  rdfs:label "has emission score" .
 
 
 ###  https://w3id.org/peco#inEmissionActivityContext
@@ -253,14 +245,18 @@ foaf:Organization rdf:type owl:Class .
                           foaf:name "Universidad Politécnica de Madrid" .
 
 
-[ org:memberOf <https://www.abdn.ac.uk#this> ;
-  foaf:name "Milan Markovic"@en
+[ org:memberOf <https://www.ox.ac.uk#this> ;
+  foaf:name "Stefano Germano"@en
 ] .
 
 [ org:memberOf <https://www.open.ac.uk#this> ;
    foaf:name "Iman Naja"@en
  ] .
 
+[ org:memberOf <https://www.open.ac.uk#this> ;
+   foaf:name "Iman Naja"@en
+ ] .
+
 [ org:memberOf <https://www.upm.es#this> ;
    foaf:name "Daniel Garijo"@en
  ] .
@@ -277,12 +273,24 @@ foaf:Organization rdf:type owl:Class .
    foaf:name "Daniel Garijo"@en
  ] .
 
-[ org:memberOf <https://www.ox.ac.uk#this> ;
-   foaf:name "Stefano Germano"@en
+[ org:memberOf <https://www.abdn.ac.uk#this> ;
+   foaf:name "Milan Markovic"@en
  ] .
 
 [ org:memberOf <https://www.abdn.ac.uk#this> ;
    foaf:name "Milan Markovic"@en
+ ] .
+
+[ org:memberOf <https://www.upm.es#this> ;
+   foaf:name "Daniel Garijo"@en
+ ] .
+
+[ org:memberOf <https://www.abdn.ac.uk#this> ;
+   foaf:name "Milan Markovic"@en
+ ] .
+
+[ org:memberOf <https://www.ox.ac.uk#this> ;
+   foaf:name "Stefano Germano"@en
  ] .
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
