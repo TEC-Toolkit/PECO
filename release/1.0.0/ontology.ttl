@@ -1,10 +1,12 @@
 @prefix : <https://w3id.org/peco#> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/peco#> .
+@base <https://w3id.org/peco> .
 
 <https://w3id.org/peco> rdf:type owl:Ontology ;
                          owl:versionIRI <https://w3id.org/peco/1.0.0> ;
@@ -12,16 +14,16 @@
                          <http://purl.org/dc/elements/1.1/title> "The Provenance of Emission Calculations Ontology"@en ;
                          <http://purl.org/dc/terms/abstract> "With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to enhance the transparency of the carbon footprint calculations via detailed provenance traces."@en ;
                          <http://purl.org/dc/terms/created> "April 24th, 2023"@en ;
-                         <http://purl.org/dc/terms/creator> [ ] ,
-[ ] ,
-[ ] ,
-[ ] ;
-<http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-<http://purl.org/dc/terms/modified> "May 5th, 2023"@en ;
-<http://purl.org/vocab/vann/preferredNamespacePrefix> "peco"@en ;
-<http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/peco#" ;
-owl:priorVersion <https://w3id.org/peco/0.0.1> ;
-owl:versionInfo "1.0.0"@en .
+                           <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0003-0454-7145>  ,
+                                                              <https://orcid.org/0000-0001-6993-0618>  ,
+                                                              <https://orcid.org/0000-0002-5477-287X> ,
+                                                              <https://orcid.org/0000-0001-6634-3266> ;
+                        <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                        <http://purl.org/dc/terms/modified> "May 5th, 2023"@en ;
+                        <http://purl.org/vocab/vann/preferredNamespacePrefix> "peco"@en ;
+                        <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/peco#" ;
+                        owl:priorVersion <https://w3id.org/peco/0.0.1> ;
+                        owl:versionInfo "1.0.0"@en .
 
 #################################################################
 #    Annotation properties
@@ -73,15 +75,15 @@ owl:versionInfo "1.0.0"@en .
 
 
 ###  http://www.w3.org/ns/org#memberOf
-<http://www.w3.org/ns/org#memberOf> rdf:type owl:AnnotationProperty .
+org:memberOf rdf:type owl:AnnotationProperty .
 
 
 ###  http://xmlns.com/foaf/0.1/homepage
-<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
+foaf:homepage rdf:type owl:AnnotationProperty .
 
 
 ###  http://xmlns.com/foaf/0.1/name
-<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+foaf:name rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -168,7 +170,7 @@ rdf:HTML rdf:type rdfs:Datatype .
 
 
 ###  http://xmlns.com/foaf/0.1/Organization
-<http://xmlns.com/foaf/0.1/Organization> rdf:type owl:Class .
+foaf:Organization rdf:type owl:Class .
 
 
 ###  https://qudt.org/2.1/schema/qudt/Quantity
@@ -217,67 +219,46 @@ rdf:HTML rdf:type rdfs:Datatype .
 #################################################################
 
 ###  https://www.abdn.ac.uk#this
-<https://www.abdn.ac.uk#this> rdf:type owl:NamedIndividual ,
-                                       <http://xmlns.com/foaf/0.1/Organization> ;
-                              <http://xmlns.com/foaf/0.1/homepage> "https://www.abdn.ac.uk" ;
-                              <http://xmlns.com/foaf/0.1/name> "University of Aberdeen" .
-
-
-###  https://www.open.ac.uk#this
-<https://www.open.ac.uk#this> rdf:type owl:NamedIndividual ,
-                                       <http://xmlns.com/foaf/0.1/Organization> ;
-                              <http://xmlns.com/foaf/0.1/homepage> "https://www.open.ac.uk" ;
-                              <http://xmlns.com/foaf/0.1/name> "The Open University" .
+<https://www.abdn.ac.uk#this> rdf:type foaf:Organization ;
+                               foaf:homepage "https://www.abdn.ac.uk/" ;
+                               foaf:name "University of Aberdeen" .
 
 
 ###  https://www.ox.ac.uk#this
-<https://www.ox.ac.uk#this> rdf:type owl:NamedIndividual ,
-                                     <http://xmlns.com/foaf/0.1/Organization> ;
-                            <http://xmlns.com/foaf/0.1/homepage> "https://www.ox.ac.uk" ;
-                            <http://xmlns.com/foaf/0.1/name> "University of Oxford" .
+<https://www.ox.ac.uk#this> rdf:type foaf:Organization ;
+                               foaf:homepage "https://www.ox.ac.uk/" ;
+                               foaf:name "University of Oxford" .
+
+
+###  https://www.open.ac.uk#this
+<https://www.open.ac.uk#this> rdf:type foaf:Organization ;
+                              foaf:homepage "https://www.open.ac.uk" ;
+                              foaf:name "The Open University" .
 
 
 ###  https://www.upm.es#this
-<https://www.upm.es#this> rdf:type owl:NamedIndividual ,
-                                   <http://xmlns.com/foaf/0.1/Organization> ;
-                          <http://xmlns.com/foaf/0.1/homepage> "https://www.upm.es" ;
-                          <http://xmlns.com/foaf/0.1/name> "Universidad Politécnica de Madrid" .
+<https://www.upm.es#this> rdf:type foaf:Organization ;
+                          foaf:homepage "https://www.upm.es" ;
+                          foaf:name "Universidad Politécnica de Madrid" .
 
 
-_:genid5 <http://www.w3.org/ns/org#memberOf> <https://www.ox.ac.uk#this> ;
-         <http://xmlns.com/foaf/0.1/name> "Stefano Germano"@en .
+#################################################################
+#    Annotations
+#################################################################
 
-_:genid6 <http://www.w3.org/ns/org#memberOf> <https://www.ox.ac.uk#this> ;
-          <http://xmlns.com/foaf/0.1/name> "Stefano Germano"@en .
+<https://orcid.org/0000-0003-0454-7145> org:memberOf <https://www.upm.es#this> ;
+        foaf:name "Daniel Garijo"@en .
 
-_:genid7 <http://www.w3.org/ns/org#memberOf> <https://www.abdn.ac.uk#this> ;
-          <http://xmlns.com/foaf/0.1/name> "Milan Markovic"@en .
 
-_:genid8 <http://www.w3.org/ns/org#memberOf> <https://www.upm.es#this> ;
-          <http://xmlns.com/foaf/0.1/name> "Daniel Garijo"@en .
+<https://orcid.org/0000-0001-6634-3266> foaf:name "Iman Naja"@en ;
+      org:memberOf <https://www.open.ac.uk#this> .
 
-_:genid9 <http://www.w3.org/ns/org#memberOf> <https://www.abdn.ac.uk#this> ;
-          <http://xmlns.com/foaf/0.1/name> "Milan Markovic"@en .
 
-_:genid10 <http://www.w3.org/ns/org#memberOf> <https://www.ox.ac.uk#this> ;
-           <http://xmlns.com/foaf/0.1/name> "Stefano Germano"@en .
+<https://orcid.org/0000-0002-5477-287X> foaf:name "Milan Markovic"@en ;
+       org:memberOf <https://www.abdn.ac.uk#this> .
 
-_:genid11 <http://www.w3.org/ns/org#memberOf> <https://www.open.ac.uk#this> ;
-           <http://xmlns.com/foaf/0.1/name> "Iman Naja"@en .
 
-_:genid12 <http://www.w3.org/ns/org#memberOf> <https://www.upm.es#this> ;
-           <http://xmlns.com/foaf/0.1/name> "Daniel Garijo"@en .
+<https://orcid.org/0000-0001-6993-0618> foaf:name "Stefano Germano"@en ;
+         org:memberOf <https://www.ox.ac.uk#this> .
 
-_:genid13 <http://www.w3.org/ns/org#memberOf> <https://www.upm.es#this> ;
-           <http://xmlns.com/foaf/0.1/name> "Daniel Garijo"@en .
-
-_:genid14 <http://www.w3.org/ns/org#memberOf> <https://www.open.ac.uk#this> ;
-           <http://xmlns.com/foaf/0.1/name> "Iman Naja"@en .
-
-_:genid15 <http://www.w3.org/ns/org#memberOf> <https://www.abdn.ac.uk#this> ;
-           <http://xmlns.com/foaf/0.1/name> "Milan Markovic"@en .
-
-_:genid16 <http://www.w3.org/ns/org#memberOf> <https://www.open.ac.uk#this> ;
-           <http://xmlns.com/foaf/0.1/name> "Iman Naja"@en .
-
-###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
