@@ -1,0 +1,522 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.4), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://qudt.org/schema/qudt", "https://w3id.org/peco", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://www.w3.org/2001/XMLSchema", "https://qudt.org/2.1/schema/qudt", "http://www.w3.org/ns/sosa", "http://xmlns.com/foaf/0.1" ],
+    "title" : {
+      "en" : "The Provenance of Emission Calculations Ontology"
+    },
+    "iri" : "https://w3id.org/peco",
+    "version" : "0.0.2",
+    "author" : [ "_:genid2147483657", "_:genid2147483656", "_:genid2147483655", "_:genid2147483654" ],
+    "description" : {
+      "en" : "This ontology defines a vocabulary for describing provenance traces of carbon emission calculations by capturing the quantifiable measurements of carbon emission sources used by some activities (e.g., electricity used by a machinery to produce a product, petrol used to make a car journey, etc.) and emission conversion factors used to estimate the carbon emissions produced by these. In addition, the ontology provides the ability to capture various data transformations that occurred before energy estimates may be used with relevant conversion factors. For example, sensors may provide raw readings about a water flow of an irrigation rig in an agri-food operation which is then used as a proxy to estimate the total volume of fertilisers used."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483656",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483654",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483657",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483655",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "en",
+        "value" : "April 24th, 2023",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "en",
+        "value" : "peco",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "en",
+        "value" : "April 24th, 2023",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to enhance the transparency of the carbon footprint calculations via detailed provenance traces.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "0.0.2",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/peco#",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The Provenance of Emission Calculations Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 13,
+    "objectPropertyCount" : 8,
+    "datatypePropertyCount" : 0,
+    "individualCount" : 4
+  },
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/ns/sosa/Result",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Result"
+    },
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://qudt.org/2.1/schema/qudt/Unit",
+    "baseIri" : "https://qudt.org/2.1/schema/qudt",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Unit"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Activity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity"
+    },
+    "subClasses" : [ "3", "4" ],
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/peco#EmissionScore",
+    "baseIri" : "https://w3id.org/peco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EmissionScore",
+      "undefined" : "Emission Score"
+    },
+    "comment" : {
+      "undefined" : "The result of the peco:EmissionCalculationActivity representing the carbon emissions produced by the linked peco:EmissionGenerationActivity."
+    },
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://qudt.org/2.1/schema/qudt/Quantity",
+    "baseIri" : "https://qudt.org/2.1/schema/qudt",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Quantity"
+    },
+    "subClasses" : [ "7" ],
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Entity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "subClasses" : [ "7" ],
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Observation",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Observation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Sensor",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sensor"
+    },
+    "attributes" : [ "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "16",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Organization",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization"
+    },
+    "individuals" : [ {
+      "iri" : "https://www.upm.es#this",
+      "baseIri" : "https://www.upm.es",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Universidad Politécnica de Madrid",
+          "type" : "label"
+        } ],
+        "homepage" : [ {
+          "identifier" : "homepage",
+          "language" : "undefined",
+          "value" : "https://www.upm.es",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "this"
+      }
+    }, {
+      "iri" : "https://www.abdn.ac.uk#this",
+      "baseIri" : "https://www.abdn.ac.uk",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "University of Aberdeen",
+          "type" : "label"
+        } ],
+        "homepage" : [ {
+          "identifier" : "homepage",
+          "language" : "undefined",
+          "value" : "https://www.abdn.ac.uk",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "this"
+      }
+    }, {
+      "iri" : "https://www.ox.ac.uk#this",
+      "baseIri" : "https://www.ox.ac.uk",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "University of Oxford",
+          "type" : "label"
+        } ],
+        "homepage" : [ {
+          "identifier" : "homepage",
+          "language" : "undefined",
+          "value" : "https://www.ox.ac.uk",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "this"
+      }
+    }, {
+      "iri" : "https://www.open.ac.uk#this",
+      "baseIri" : "https://www.open.ac.uk",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "The Open University",
+          "type" : "label"
+        } ],
+        "homepage" : [ {
+          "identifier" : "homepage",
+          "language" : "undefined",
+          "value" : "https://www.open.ac.uk",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "this"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/peco#EmissionCalculationActivity",
+    "baseIri" : "https://w3id.org/peco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EmissionCalculationActivity",
+      "undefined" : "Emission Calculation Activity"
+    },
+    "comment" : {
+      "undefined" : "An activity representing a whole or a part of the carbon emission calculation process."
+    },
+    "id" : "3",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://qudt.org/2.1/schema/qudt/QuantityKind",
+    "baseIri" : "https://qudt.org/2.1/schema/qudt",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QuantityKind"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/peco#EmissionGenerationActivity",
+    "baseIri" : "https://w3id.org/peco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EmissionGenerationActivity",
+      "undefined" : "Emission Generation Activity"
+    },
+    "comment" : {
+      "undefined" : "An activity that produces emissions. For example, training of ML models, driving a car, farming operation, etc. This activity can be represented at differentl levels of abstraction, for example, as a single overarching activity (e.g., factory producion for year 2022) or as a number of smaller activities (e.g., production of a single batch of products)."
+    },
+    "id" : "4",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/peco#EmissionCalculationEntity",
+    "baseIri" : "https://w3id.org/peco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EmissionCalculationEntity",
+      "undefined" : "Emission Calculation Entity"
+    },
+    "subClasses" : [ "6" ],
+    "comment" : {
+      "undefined" : "A prov:Entitiy representing quantifieble input and output data described as qudt:Quantity that influenced emission calculation process. If this data is produced as a result of some sensor observation it would be also of type sosa:Result."
+    },
+    "id" : "7",
+    "superClasses" : [ "9", "11" ]
+  } ],
+  "property" : [ {
+    "id" : "5",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "5"
+  }, {
+    "range" : "9",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "8"
+  }, {
+    "range" : "11",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "10"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://qudt.org/schema/qudt/hasQuantityKind",
+    "baseIri" : "http://qudt.org/schema/qudt",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasQuantityKind",
+      "undefined" : "has quantity kind"
+    },
+    "domain" : "9",
+    "attributes" : [ "object", "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/phenomenonTime",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "phenomenonTime"
+    },
+    "domain" : "16",
+    "attributes" : [ "object", "external" ],
+    "id" : "15"
+  }, {
+    "range" : "2",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/peco#hasEmissionScore",
+    "baseIri" : "https://w3id.org/peco",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasEmissionScore",
+      "undefined" : "has emission score"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "A property linking peco:EmissionGenerationActivity with a quantifiable representation of the amount of emissions prodcued by this activity."
+    },
+    "attributes" : [ "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasFeatureOfInterest"
+    },
+    "domain" : "16",
+    "attributes" : [ "object", "external" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/peco#inEmissionActivityContext",
+    "baseIri" : "https://w3id.org/peco",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "inEmissionActivityContext",
+      "undefined" : "in emission activity context"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "A property linking peco:EmissionGenerationActivity to sosa:Observation. For example, a machine learning training activity (peco:EmissionGenerationActivity) is linked to electricity monitoring activity (sosa:Observation) that monitors electricity consumption of a GPU (sosa:FeatureOfInterest) used to train the ML model."
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "madeBySensor"
+    },
+    "domain" : "16",
+    "attributes" : [ "object", "external" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://qudt.org/schema/qudt/unit",
+    "baseIri" : "http://qudt.org/schema/qudt",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "unit",
+      "undefined" : "unit"
+    },
+    "domain" : "9",
+    "comment" : {
+      "undefined" : "A reference to the unit of measure of a quantity (variable or constant) of interest."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasResult"
+    },
+    "domain" : "16",
+    "attributes" : [ "object", "external" ],
+    "id" : "26"
+  } ]
+}
