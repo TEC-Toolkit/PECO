@@ -1,0 +1,250 @@
+<h2 id="crossreference" class="list">Cross-reference for The Provenance of Emission Calculations Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The Provenance of Emission Calculations Ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#EmissionCalculationActivity"
+            title="https://w3id.org/peco#EmissionCalculationActivity">Emission Calculation Activity</a>
+      </li>
+      <li>
+         <a href="#EmissionCalculationEntity" title="https://w3id.org/peco#EmissionCalculationEntity">Emission Calculation Entity</a>
+      </li>
+      <li>
+         <a href="#EmissionGenerationActivity" title="https://w3id.org/peco#EmissionGenerationActivity">Emission Generation Activity</a>
+      </li>
+      <li>
+         <a href="#EmissionScore" title="https://w3id.org/peco#EmissionScore">Emission Score</a>
+      </li>
+   </ul>
+   <div class="entity" id="EmissionCalculationActivity">
+      <h3>Emission Calculation Activity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/peco#EmissionCalculationActivity</p>
+      <div class="comment">
+         <span class="markdown">An activity representing a whole or a part of the carbon emission calculation process.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Activity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EmissionCalculationEntity">
+      <h3>Emission Calculation Entity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/peco#EmissionCalculationEntity</p>
+      <div class="comment">
+         <span class="markdown">A prov:Entitiy representing quantifieble input and output data described as qudt:Quantity that influenced emission calculation process. If this data is produced as a result of some sensor observation it would be also of type sosa:Result.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Entity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Entity">entity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="https://qudt.org/2.1/schema/qudt/Quantity"
+               target="_blank"
+               title="https://qudt.org/2.1/schema/qudt/Quantity">quantity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#EmissionScore" title="https://w3id.org/peco#EmissionScore">Emission Score</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EmissionGenerationActivity">
+      <h3>Emission Generation Activity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/peco#EmissionGenerationActivity</p>
+      <div class="comment">
+         <span class="markdown">An activity that produces emissions. For example, training of ML models, driving a car, farming operation, etc. This activity can be represented at differentl levels of abstraction, for example, as a single overarching activity (e.g., factory producion for year 2022) or as a number of smaller activities (e.g., production of a single batch of products).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Activity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasEmissionScore" title="https://w3id.org/peco#hasEmissionScore">has emission score</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#inEmissionActivityContext" title="https://w3id.org/peco#inEmissionActivityContext">in emission activity context</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EmissionScore">
+      <h3>Emission Score<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/peco#EmissionScore</p>
+      <div class="comment">
+         <span class="markdown">The result of the peco:EmissionCalculationActivity representing the carbon emissions produced by the linked peco:EmissionGenerationActivity.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#EmissionCalculationEntity" title="https://w3id.org/peco#EmissionCalculationEntity">Emission Calculation Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasEmissionScore" title="https://w3id.org/peco#hasEmissionScore">has emission score</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasEmissionScore" title="https://w3id.org/peco#hasEmissionScore">has emission score</a>
+      </li>
+      <li>
+         <a href="#http://qudt.org/schema/qudt/hasQuantityKind" title="http://qudt.org/schema/qudt/hasQuantityKind">has quantity kind</a>
+      </li>
+      <li>
+         <a href="#inEmissionActivityContext" title="https://w3id.org/peco#inEmissionActivityContext">in emission activity context</a>
+      </li>
+      <li>
+         <a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit">unit</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasEmissionScore">
+      <h3>has emission score<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/peco#hasEmissionScore</p>
+      <div class="comment">
+         <span class="markdown">A property linking peco:EmissionGenerationActivity with a quantifiable representation of the amount of emissions prodcued by this activity.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#EmissionGenerationActivity" title="https://w3id.org/peco#EmissionGenerationActivity">Emission Generation Activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#EmissionScore" title="https://w3id.org/peco#EmissionScore">Emission Score</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://qudt.org/schema/qudt/hasQuantityKind">
+      <h3>has quantity kind<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://qudt.org/schema/qudt/hasQuantityKind</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://qudt.org/2.1/schema/qudt/Quantity"
+                  target="_blank"
+                  title="https://qudt.org/2.1/schema/qudt/Quantity">quantity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://qudt.org/2.1/schema/qudt/QuantityKind"
+                  target="_blank"
+                  title="https://qudt.org/2.1/schema/qudt/QuantityKind">quantity kind</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inEmissionActivityContext">
+      <h3>in emission activity context<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/peco#inEmissionActivityContext</p>
+      <div class="comment">
+         <span class="markdown">A property linking peco:EmissionGenerationActivity to sosa:Observation. For example, a machine learning training activity (peco:EmissionGenerationActivity) is linked to electricity monitoring activity (sosa:Observation) that monitors electricity consumption of a GPU (sosa:FeatureOfInterest) used to train the ML model.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Observation"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Observation">observation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#EmissionGenerationActivity" title="https://w3id.org/peco#EmissionGenerationActivity">Emission Generation Activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://qudt.org/schema/qudt/unit">
+      <h3>unit<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://qudt.org/schema/qudt/unit</p>
+      <div class="comment">
+         <span class="markdown">A reference to the unit of measure of a quantity (variable or constant) of interest.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://qudt.org/2.1/schema/qudt/Quantity"
+                  target="_blank"
+                  title="https://qudt.org/2.1/schema/qudt/Quantity">quantity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://qudt.org/2.1/schema/qudt/Unit"
+                  target="_blank"
+                  title="https://qudt.org/2.1/schema/qudt/Unit">unit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+</div>
+</div>
