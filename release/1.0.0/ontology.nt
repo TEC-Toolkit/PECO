@@ -4,16 +4,21 @@
 <https://w3id.org/peco> <http://purl.org/dc/elements/1.1/title> "The Provenance of Emission Calculations Ontology"@en .
 <https://w3id.org/peco> <http://purl.org/dc/terms/abstract> "With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to enhance the transparency of the carbon footprint calculations via detailed provenance traces."@en .
 <https://w3id.org/peco> <http://purl.org/dc/terms/created> "April 24th, 2023"@en .
-<https://w3id.org/peco> <http://purl.org/dc/terms/creator> _:genid1 .
-<https://w3id.org/peco> <http://purl.org/dc/terms/creator> _:genid2 .
-<https://w3id.org/peco> <http://purl.org/dc/terms/creator> _:genid3 .
-<https://w3id.org/peco> <http://purl.org/dc/terms/creator> _:genid4 .
+<https://w3id.org/peco> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-6634-3266> .
+<https://w3id.org/peco> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-6993-0618> .
+<https://w3id.org/peco> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-5477-287X> .
+<https://w3id.org/peco> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0003-0454-7145> .
+<https://w3id.org/peco> <http://purl.org/dc/terms/issued> "May 8th, 2023"@en .
 <https://w3id.org/peco> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/peco> <http://purl.org/dc/terms/modified> "May 5th, 2023"@en .
+<https://w3id.org/peco> <http://purl.org/dc/terms/modified> "May 8th, 2023"@en .
+<https://w3id.org/peco> <http://purl.org/dc/terms/publisher> "TEC-Toolkit on Github"@en .
+<https://w3id.org/peco> <http://purl.org/ontology/bibo/status> "TEC Toolkit specification (stable)"@en .
 <https://w3id.org/peco> <http://purl.org/vocab/vann/preferredNamespacePrefix> "peco"@en .
 <https://w3id.org/peco> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/peco#" .
 <https://w3id.org/peco> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/peco/0.0.1> .
 <https://w3id.org/peco> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0"@en .
+<https://w3id.org/peco> <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov/vocabs/peco> .
+<https://w3id.org/peco> <https://schema.org/logo> <https://raw.githubusercontent.com/TEC-Toolkit/Emission-Conversion-Factors-Ontology/main/logos/Logo%20PECO.png?token=GHSAT0AAAAAACCJOK26TI4NXW45JQ27BVDGZCZHBBQ> .
 # 
 # 
 # #################################################################
@@ -41,11 +46,20 @@
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -65,6 +79,12 @@
 # 
 # http://xmlns.com/foaf/0.1/name
 <http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/includedInDataCatalog
+<https://schema.org/includedInDataCatalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/logo
+<https://schema.org/logo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -89,28 +109,41 @@
 # 
 # http://qudt.org/schema/qudt/hasQuantityKind
 <http://qudt.org/schema/qudt/hasQuantityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://qudt.org/schema/qudt/hasQuantityKind> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qudt.org/2.1/schema/qudt/Quantity> .
-<http://qudt.org/schema/qudt/hasQuantityKind> <http://www.w3.org/2000/01/rdf-schema#range> <https://qudt.org/2.1/schema/qudt/QuantityKind> .
+<http://qudt.org/schema/qudt/hasQuantityKind> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qudt.org/schema/qudt/Quantity> .
+<http://qudt.org/schema/qudt/hasQuantityKind> <http://www.w3.org/2000/01/rdf-schema#range> <https://qudt.org/schema/qudt/QuantityKind> .
 <http://qudt.org/schema/qudt/hasQuantityKind> <http://www.w3.org/2000/01/rdf-schema#label> "has quantity kind" .
 # 
 # http://qudt.org/schema/qudt/unit
 <http://qudt.org/schema/qudt/unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://qudt.org/schema/qudt/unit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qudt.org/2.1/schema/qudt/Quantity> .
-<http://qudt.org/schema/qudt/unit> <http://www.w3.org/2000/01/rdf-schema#range> <https://qudt.org/2.1/schema/qudt/Unit> .
+<http://qudt.org/schema/qudt/unit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qudt.org/schema/qudt/Quantity> .
+<http://qudt.org/schema/qudt/unit> <http://www.w3.org/2000/01/rdf-schema#range> <https://qudt.org/schema/qudt/Unit> .
 <http://qudt.org/schema/qudt/unit> <http://www.w3.org/2000/01/rdf-schema#comment> "A reference to the unit of measure of a quantity (variable or constant) of interest." .
+<http://qudt.org/schema/qudt/unit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt/> .
 <http://qudt.org/schema/qudt/unit> <http://www.w3.org/2000/01/rdf-schema#label> "unit" .
 # 
 # http://www.w3.org/ns/sosa/hasFeatureOfInterest
 <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled." .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has feature of interest" .
 # 
 # http://www.w3.org/ns/sosa/hasResult
 <http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation and a Sensor or Actuator and a Result, which contains a value representing the value associated with the observed Property." .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "has result" .
 # 
 # http://www.w3.org/ns/sosa/madeBySensor
 <http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an Observation and the Sensor which made the Observations." .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#label> "made by Sensor" .
 # 
 # http://www.w3.org/ns/sosa/phenomenonTime
 <http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time that the Result of an Observation, Actuation, or Sampling applies to the FeatureOfInterest." .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#label> "phenomenon time" .
 # 
 # https://w3id.org/peco#hasEmissionScore
 <https://w3id.org/peco#hasEmissionScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -121,10 +154,25 @@
 # 
 # https://w3id.org/peco#inEmissionActivityContext
 <https://w3id.org/peco#inEmissionActivityContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/peco#inEmissionActivityContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/peco#inEmissionActivityContext> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/peco#EmissionObservation> .
 <https://w3id.org/peco#inEmissionActivityContext> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/peco#EmissionGenerationActivity> .
 <https://w3id.org/peco#inEmissionActivityContext> <http://www.w3.org/2000/01/rdf-schema#comment> "A property linking peco:EmissionGenerationActivity to sosa:Observation. For example, a machine learning training activity (peco:EmissionGenerationActivity) is linked to electricity monitoring activity (sosa:Observation) that monitors electricity consumption of a GPU (sosa:FeatureOfInterest) used to train the ML model." .
 <https://w3id.org/peco#inEmissionActivityContext> <http://www.w3.org/2000/01/rdf-schema#label> "in emission activity context" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt/value
+<http://qudt.org/schema/qudt/value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://qudt.org/schema/qudt/value> <http://www.w3.org/2000/01/rdf-schema#comment> "This property identifies the value associated with a data structure. The value may be a scalar or a reference to another object. The disjoint sub-properties of this data:value distinguish between scalar values and object references." .
+<http://qudt.org/schema/qudt/value> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://qudt.org/schema/qudt/" .
+<http://qudt.org/schema/qudt/value> <http://www.w3.org/2000/01/rdf-schema#label> "value" .
 # 
 # 
 # 
@@ -137,30 +185,54 @@
 # 
 # http://www.w3.org/ns/prov#Activity
 <http://www.w3.org/ns/prov#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities." .
+<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/prov-o> .
+<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/2000/01/rdf-schema#label> "Activity" .
 # 
 # http://www.w3.org/ns/prov#Entity
 <http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary." .
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/prov-o> .
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/2000/01/rdf-schema#label> "Entity" .
 # 
 # http://www.w3.org/ns/sosa/Observation
 <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with." .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation" .
 # 
 # http://www.w3.org/ns/sosa/Result
 <http://www.w3.org/ns/sosa/Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#comment> "The Result of an Observation, Actuation, or act of Sampling." .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#label> "Result" .
 # 
 # http://www.w3.org/ns/sosa/Sensor
 <http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result." .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor" .
 # 
 # http://xmlns.com/foaf/0.1/Organization
 <http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# https://qudt.org/2.1/schema/qudt/Quantity
-<https://qudt.org/2.1/schema/qudt/Quantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# https://qudt.org/schema/qudt/Quantity
+<https://qudt.org/schema/qudt/Quantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qudt.org/schema/qudt/Quantity> <http://www.w3.org/2000/01/rdf-schema#comment> "A quantity is the measurement of an observable property of a particular object, event, or physical system." .
+<https://qudt.org/schema/qudt/Quantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt/> .
+<https://qudt.org/schema/qudt/Quantity> <http://www.w3.org/2000/01/rdf-schema#label> "Quantity" .
 # 
-# https://qudt.org/2.1/schema/qudt/QuantityKind
-<https://qudt.org/2.1/schema/qudt/QuantityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# https://qudt.org/schema/qudt/QuantityKind
+<https://qudt.org/schema/qudt/QuantityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qudt.org/schema/qudt/QuantityKind> <http://www.w3.org/2000/01/rdf-schema#comment> "A Quantity Kind is any observable property that can be measured and quantified numerically." .
+<https://qudt.org/schema/qudt/QuantityKind> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt/> .
+<https://qudt.org/schema/qudt/QuantityKind> <http://www.w3.org/2000/01/rdf-schema#label> "Quantity Kind" .
 # 
-# https://qudt.org/2.1/schema/qudt/Unit
-<https://qudt.org/2.1/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# https://qudt.org/schema/qudt/Unit
+<https://qudt.org/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\\\(Q = nU\\\\)." .
+<https://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt/> .
+<https://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit" .
 # 
 # https://w3id.org/peco#EmissionCalculationActivity
 <https://w3id.org/peco#EmissionCalculationActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -171,8 +243,8 @@
 # https://w3id.org/peco#EmissionCalculationEntity
 <https://w3id.org/peco#EmissionCalculationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/peco#EmissionCalculationEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
-<https://w3id.org/peco#EmissionCalculationEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qudt.org/2.1/schema/qudt/Quantity> .
-<https://w3id.org/peco#EmissionCalculationEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A prov:Entitiy representing quantifieble input and output data described as qudt:Quantity that influenced emission calculation process. If this data is produced as a result of some sensor observation it would be also of type sosa:Result." .
+<https://w3id.org/peco#EmissionCalculationEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qudt.org/schema/qudt/Quantity> .
+<https://w3id.org/peco#EmissionCalculationEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A prov:Entitiy representing quantifiable input and output data described as qudt:Quantity that influenced emission calculation process. If this data is produced as a result of some sensor observation it would be also of type sosa:Result." .
 <https://w3id.org/peco#EmissionCalculationEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Emission Calculation Entity" .
 # 
 # https://w3id.org/peco#EmissionGenerationActivity
@@ -180,6 +252,13 @@
 <https://w3id.org/peco#EmissionGenerationActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
 <https://w3id.org/peco#EmissionGenerationActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity that produces emissions. For example, training of ML models, driving a car, farming operation, etc. This activity can be represented at differentl levels of abstraction, for example, as a single overarching activity (e.g., factory producion for year 2022) or as a number of smaller activities (e.g., production of a single batch of products)." .
 <https://w3id.org/peco#EmissionGenerationActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Emission Generation Activity" .
+# 
+# https://w3id.org/peco#EmissionObservation
+<https://w3id.org/peco#EmissionObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/peco#EmissionObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/peco#EmissionObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/peco#EmissionObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of sosa:Observation that produces observation results which can be used to calculate peco:EmissionScore  associated with some peco:EmissionGenerationActivity." .
+<https://w3id.org/peco#EmissionObservation> <http://www.w3.org/2000/01/rdf-schema#label> "Emission Observation" .
 # 
 # https://w3id.org/peco#EmissionScore
 <https://w3id.org/peco#EmissionScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -199,7 +278,7 @@
 # https://www.abdn.ac.uk#this
 <https://www.abdn.ac.uk#this> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://www.abdn.ac.uk#this> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
-<https://www.abdn.ac.uk#this> <http://xmlns.com/foaf/0.1/homepage> "https://www.abdn.ac.uk" .
+<https://www.abdn.ac.uk#this> <http://xmlns.com/foaf/0.1/homepage> "https://www.abdn.ac.uk/" .
 <https://www.abdn.ac.uk#this> <http://xmlns.com/foaf/0.1/name> "University of Aberdeen" .
 # 
 # https://www.open.ac.uk#this
@@ -211,7 +290,7 @@
 # https://www.ox.ac.uk#this
 <https://www.ox.ac.uk#this> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://www.ox.ac.uk#this> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
-<https://www.ox.ac.uk#this> <http://xmlns.com/foaf/0.1/homepage> "https://www.ox.ac.uk" .
+<https://www.ox.ac.uk#this> <http://xmlns.com/foaf/0.1/homepage> "https://www.ox.ac.uk/" .
 <https://www.ox.ac.uk#this> <http://xmlns.com/foaf/0.1/name> "University of Oxford" .
 # 
 # https://www.upm.es#this
@@ -220,28 +299,25 @@
 <https://www.upm.es#this> <http://xmlns.com/foaf/0.1/homepage> "https://www.upm.es" .
 <https://www.upm.es#this> <http://xmlns.com/foaf/0.1/name> "Universidad Politécnica de Madrid" .
 # 
-_:genid5 <http://www.w3.org/ns/org#memberOf> <https://www.ox.ac.uk#this> .
-_:genid5 <http://xmlns.com/foaf/0.1/name> "Stefano Germano"@en .
-_:genid6 <http://www.w3.org/ns/org#memberOf> <https://www.ox.ac.uk#this> .
-_:genid6 <http://xmlns.com/foaf/0.1/name> "Stefano Germano"@en .
-_:genid7 <http://www.w3.org/ns/org#memberOf> <https://www.abdn.ac.uk#this> .
-_:genid7 <http://xmlns.com/foaf/0.1/name> "Milan Markovic"@en .
-_:genid8 <http://www.w3.org/ns/org#memberOf> <https://www.upm.es#this> .
-_:genid8 <http://xmlns.com/foaf/0.1/name> "Daniel Garijo"@en .
-_:genid9 <http://www.w3.org/ns/org#memberOf> <https://www.abdn.ac.uk#this> .
-_:genid9 <http://xmlns.com/foaf/0.1/name> "Milan Markovic"@en .
-_:genid10 <http://www.w3.org/ns/org#memberOf> <https://www.ox.ac.uk#this> .
-_:genid10 <http://xmlns.com/foaf/0.1/name> "Stefano Germano"@en .
-_:genid11 <http://www.w3.org/ns/org#memberOf> <https://www.open.ac.uk#this> .
-_:genid11 <http://xmlns.com/foaf/0.1/name> "Iman Naja"@en .
-_:genid12 <http://www.w3.org/ns/org#memberOf> <https://www.upm.es#this> .
-_:genid12 <http://xmlns.com/foaf/0.1/name> "Daniel Garijo"@en .
-_:genid13 <http://www.w3.org/ns/org#memberOf> <https://www.upm.es#this> .
-_:genid13 <http://xmlns.com/foaf/0.1/name> "Daniel Garijo"@en .
-_:genid14 <http://www.w3.org/ns/org#memberOf> <https://www.open.ac.uk#this> .
-_:genid14 <http://xmlns.com/foaf/0.1/name> "Iman Naja"@en .
-_:genid15 <http://www.w3.org/ns/org#memberOf> <https://www.abdn.ac.uk#this> .
-_:genid15 <http://xmlns.com/foaf/0.1/name> "Milan Markovic"@en .
-_:genid16 <http://www.w3.org/ns/org#memberOf> <https://www.open.ac.uk#this> .
-_:genid16 <http://xmlns.com/foaf/0.1/name> "Iman Naja"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://orcid.org/0000-0001-6634-3266> <http://www.w3.org/ns/org#memberOf> <https://www.open.ac.uk#this> .
+<https://orcid.org/0000-0001-6634-3266> <http://xmlns.com/foaf/0.1/name> "Iman Naja"@en .
+# 
+<https://orcid.org/0000-0001-6993-0618> <http://www.w3.org/ns/org#memberOf> <https://www.ox.ac.uk#this> .
+<https://orcid.org/0000-0001-6993-0618> <http://xmlns.com/foaf/0.1/name> "Stefano Germano"@en .
+# 
+<https://orcid.org/0000-0002-5477-287X> <http://www.w3.org/ns/org#memberOf> <https://www.abdn.ac.uk#this> .
+<https://orcid.org/0000-0002-5477-287X> <http://xmlns.com/foaf/0.1/name> "Milan Markovic"@en .
+# 
+<https://orcid.org/0000-0003-0454-7145> <http://www.w3.org/ns/org#memberOf> <https://www.upm.es#this> .
+<https://orcid.org/0000-0003-0454-7145> <http://xmlns.com/foaf/0.1/name> "Daniel Garijo"@en .
+# 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

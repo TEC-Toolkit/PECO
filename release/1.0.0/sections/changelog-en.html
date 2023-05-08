@@ -2,25 +2,58 @@
 <h2 id="changes" class="list">Changes from last version</h2>
 <h3 id="changeClass" class="list">Classes</h3>
 <details><summary><u>Modified classes</u></summary>
-<ul><li><a href="#https://qudt.org/2.1/schema/qudt/Quantity">https://qudt.org/2.1/schema/qudt/Quantity</a>
+<ul><li><a href="#http://www.w3.org/ns/prov#Activity">http://www.w3.org/ns/prov#Activity</a>
 <ul>
-<li>Deleted: rdfs:comment "<p class=\\\"lm-para\\\">A <b>quantity</b> is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying <b>quantity kind</b> is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>
-
-<p class=\\\"lm-para\\\">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points, velocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure.
-
-<p class=\\\"lm-para\\\">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance divided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded as \\\"fundamental\\\" in this sense.</p>
-<p class=\\\"lm-para\\\">A quantity is distinguished from a \\\"quantity kind\\\" in that the former carries a value and the latter is a type specifier.</p>"^^xsd:string</li>
-<li>Deleted: rdfs:label "Quantity"^^xsd:string</li>
+<li>Added: rdfs:comment "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities."^^xsd:string</li>
+<li>Added: rdfs:label "Activity"^^xsd:string</li>
+<li>Added: rdfs:isDefinedBy https://www.w3.org/ns/prov-o</li>
 </ul>
 </li>
-<li><a href="#https://qudt.org/2.1/schema/qudt/Unit">https://qudt.org/2.1/schema/qudt/Unit</a>
+<li><a href="#http://www.w3.org/ns/prov#Entity">http://www.w3.org/ns/prov#Entity</a>
 <ul>
-<li>Deleted: rdfs:comment "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\\\(Q = nU\\\\)."^^xsd:string</li>
-<li>Deleted: rdfs:label "Unit"^^xsd:string</li>
+<li>Added: rdfs:comment "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary."^^xsd:string</li>
+<li>Added: rdfs:label "Entity"^^xsd:string</li>
+<li>Added: rdfs:isDefinedBy https://www.w3.org/ns/prov-o</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/sosa/Result">http://www.w3.org/ns/sosa/Result</a>
+<ul>
+<li>Added: rdfs:label "Result"^^xsd:string</li>
+<li>Added: rdfs:comment "The Result of an Observation, Actuation, or act of Sampling."^^xsd:string</li>
+<li>Added: rdfs:isDefinedBy http://www.w3.org/ns/sosa/</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/sosa/Sensor">http://www.w3.org/ns/sosa/Sensor</a>
+<ul>
+<li>Added: rdfs:label "Sensor"^^xsd:string</li>
+<li>Added: rdfs:comment "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result."^^xsd:string</li>
+<li>Added: rdfs:isDefinedBy http://www.w3.org/ns/sosa/</li>
+</ul>
+</li>
+<li><a href="#EmissionCalculationEntity">https://w3id.org/peco#EmissionCalculationEntity</a>
+<ul>
+<li>Added: SubClass of https://qudt.org/schema/qudt/Quantity</li>
+<li>Added: rdfs:comment "A prov:Entitiy representing quantifiable input and output data described as qudt:Quantity that influenced emission calculation process. If this data is produced as a result of some sensor observation it would be also of type sosa:Result."^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: SubClass of https://qudt.org/2.1/schema/qudt/Quantity</li>
+<li>Deleted: rdfs:comment "A prov:Entitiy representing quantifieble input and output data described as qudt:Quantity that influenced emission calculation process. If this data is produced as a result of some sensor observation it would be also of type sosa:Result."^^xsd:string</li>
 </ul>
 </li>
 </ul></details><details><summary><u>Added classes</u></summary>
 <ul><li><a href="#http://www.w3.org/ns/sosa/Observation">http://www.w3.org/ns/sosa/Observation</a>
+</li>
+<li><a href="#https://qudt.org/schema/qudt/Quantity">https://qudt.org/schema/qudt/Quantity</a>
+</li>
+<li><a href="#https://qudt.org/schema/qudt/QuantityKind">https://qudt.org/schema/qudt/QuantityKind</a>
+</li>
+<li><a href="#https://qudt.org/schema/qudt/Unit">https://qudt.org/schema/qudt/Unit</a>
+</li>
+<li><a href="#EmissionObservation">https://w3id.org/peco#EmissionObservation</a>
+<ul>
+<li>Added: SubClass of http://www.w3.org/ns/prov#Activity</li>
+<li>Added: SubClass of http://www.w3.org/ns/sosa/Observation</li>
+</ul>
 </li>
 <li><a href="#EmissionScore">https://w3id.org/peco#EmissionScore</a>
 <ul>
@@ -30,12 +63,68 @@
 </ul></details><details><summary><u>Deleted classes</u></summary>
 <ul><li><a href="#http://www.w3.org/ns/prov#Plan">http://www.w3.org/ns/prov#Plan</a>
 </li>
+<li><a href="#https://qudt.org/2.1/schema/qudt/Quantity">https://qudt.org/2.1/schema/qudt/Quantity</a>
+</li>
+<li><a href="#https://qudt.org/2.1/schema/qudt/QuantityKind">https://qudt.org/2.1/schema/qudt/QuantityKind</a>
+</li>
+<li><a href="#https://qudt.org/2.1/schema/qudt/Unit">https://qudt.org/2.1/schema/qudt/Unit</a>
+</li>
 <li><a href="#CalculationFormula">https://w3id.org/peco#CalculationFormula</a>
 </li>
 <li><a href="#Estimate">https://w3id.org/peco#Estimate</a>
 </li>
 </ul></details><h3 id="changeProp" class="list">Object Properties</h3>
-<details><summary><u>Added object properties</u></summary>
+<details><summary><u>Modified object properties</u></summary>
+<ul><li><a href="#http://qudt.org/schema/qudt/hasQuantityKind">http://qudt.org/schema/qudt/hasQuantityKind</a>
+<ul>
+<li>Added: Range https://qudt.org/schema/qudt/QuantityKind</li>
+<li>Added: domain https://qudt.org/schema/qudt/Quantity</li>
+</ul>
+<ul>
+<li>Deleted: domain https://qudt.org/2.1/schema/qudt/Quantity</li>
+<li>Deleted: Range https://qudt.org/2.1/schema/qudt/QuantityKind</li>
+</ul>
+</li>
+<li><a href="#http://qudt.org/schema/qudt/unit">http://qudt.org/schema/qudt/unit</a>
+<ul>
+<li>Added: rdfs:isDefinedBy http://qudt.org/schema/qudt/</li>
+<li>Added: domain https://qudt.org/schema/qudt/Quantity</li>
+<li>Added: Range https://qudt.org/schema/qudt/Unit</li>
+</ul>
+<ul>
+<li>Deleted: Range https://qudt.org/2.1/schema/qudt/Unit</li>
+<li>Deleted: domain https://qudt.org/2.1/schema/qudt/Quantity</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest">http://www.w3.org/ns/sosa/hasFeatureOfInterest</a>
+<ul>
+<li>Added: rdfs:label "has feature of interest"^^xsd:string</li>
+<li>Added: rdfs:isDefinedBy http://www.w3.org/ns/sosa/</li>
+<li>Added: rdfs:comment "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/sosa/hasResult">http://www.w3.org/ns/sosa/hasResult</a>
+<ul>
+<li>Added: rdfs:isDefinedBy http://www.w3.org/ns/sosa/</li>
+<li>Added: rdfs:comment "Relation linking an Observation and a Sensor or Actuator and a Result, which contains a value representing the value associated with the observed Property."^^xsd:string</li>
+<li>Added: rdfs:label "has result"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/sosa/madeBySensor">http://www.w3.org/ns/sosa/madeBySensor</a>
+<ul>
+<li>Added: rdfs:isDefinedBy http://www.w3.org/ns/sosa/</li>
+<li>Added: rdfs:comment "Relation between an Observation and the Sensor which made the Observations."^^xsd:string</li>
+<li>Added: rdfs:label "made by Sensor"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/sosa/phenomenonTime">http://www.w3.org/ns/sosa/phenomenonTime</a>
+<ul>
+<li>Added: rdfs:comment "The time that the Result of an Observation, Actuation, or Sampling applies to the FeatureOfInterest."^^xsd:string</li>
+<li>Added: rdfs:isDefinedBy http://www.w3.org/ns/sosa/</li>
+<li>Added: rdfs:label "phenomenon time"^^xsd:string</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added object properties</u></summary>
 <ul><li><a href="#hasEmissionScore">https://w3id.org/peco#hasEmissionScore</a>
 <ul>
 <li>Added: Range https://w3id.org/peco#EmissionScore</li>
@@ -44,11 +133,15 @@
 </li>
 <li><a href="#inEmissionActivityContext">https://w3id.org/peco#inEmissionActivityContext</a>
 <ul>
+<li>Added: domain https://w3id.org/peco#EmissionObservation</li>
 <li>Added: Range https://w3id.org/peco#EmissionGenerationActivity</li>
-<li>Added: domain http://www.w3.org/ns/sosa/Observation</li>
 </ul>
 </li>
 </ul></details><details><summary><u>Deleted object properties</u></summary>
 <ul><li><a href="#hasEmmissionScore">https://w3id.org/peco#hasEmmissionScore</a>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+<details><summary><u>Added data properties</u></summary>
+<ul><li><a href="#http://qudt.org/schema/qudt/value">http://qudt.org/schema/qudt/value</a>
 </li>
 </ul></details></div>

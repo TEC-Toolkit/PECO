@@ -4,6 +4,9 @@ This section provides details for each class and property defined by The Provena
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a>
+      </li>
+      <li>
          <a href="#EmissionCalculationActivity"
             title="https://w3id.org/peco#EmissionCalculationActivity">Emission Calculation Activity</a>
       </li>
@@ -14,9 +17,60 @@ This section provides details for each class and property defined by The Provena
          <a href="#EmissionGenerationActivity" title="https://w3id.org/peco#EmissionGenerationActivity">Emission Generation Activity</a>
       </li>
       <li>
+         <a href="#EmissionObservation" title="https://w3id.org/peco#EmissionObservation">Emission Observation</a>
+      </li>
+      <li>
          <a href="#EmissionScore" title="https://w3id.org/peco#EmissionScore">Emission Score</a>
       </li>
+      <li>
+         <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a>
+      </li>
+      <li>
+         <a href="#https://qudt.org/schema/qudt/Quantity" title="https://qudt.org/schema/qudt/Quantity">Quantity</a>
+      </li>
+      <li>
+         <a href="#https://qudt.org/schema/qudt/QuantityKind" title="https://qudt.org/schema/qudt/QuantityKind">Quantity Kind</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/Result" title="http://www.w3.org/ns/sosa/Result">Result</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a>
+      </li>
+      <li>
+         <a href="#https://qudt.org/schema/qudt/Unit" title="https://qudt.org/schema/qudt/Unit">Unit</a>
+      </li>
    </ul>
+   <div class="entity" id="http://www.w3.org/ns/prov#Activity">
+      <h3>Activity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/prov#Activity</p>
+      <div class="comment">
+         <span class="markdown">An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.w3.org/ns/prov-o">https://www.w3.org/ns/prov-o</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#EmissionCalculationActivity"
+               title="https://w3id.org/peco#EmissionCalculationActivity">Emission Calculation Activity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#EmissionGenerationActivity" title="https://w3id.org/peco#EmissionGenerationActivity">Emission Generation Activity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#EmissionObservation" title="https://w3id.org/peco#EmissionObservation">Emission Observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="EmissionCalculationActivity">
       <h3>Emission Calculation Activity<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -30,9 +84,7 @@ This section provides details for each class and property defined by The Provena
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="http://www.w3.org/ns/prov#Activity"
-               target="_blank"
-               title="http://www.w3.org/ns/prov#Activity">activity</a>
+            <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -45,17 +97,13 @@ This section provides details for each class and property defined by The Provena
       <p>
          <strong>IRI:</strong> https://w3id.org/peco#EmissionCalculationEntity</p>
       <div class="comment">
-         <span class="markdown">A prov:Entitiy representing quantifieble input and output data described as qudt:Quantity that influenced emission calculation process. If this data is produced as a result of some sensor observation it would be also of type sosa:Result.</span>
+         <span class="markdown">A prov:Entitiy representing quantifiable input and output data described as qudt:Quantity that influenced emission calculation process. If this data is produced as a result of some sensor observation it would be also of type sosa:Result.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="http://www.w3.org/ns/prov#Entity"
-               target="_blank"
-               title="http://www.w3.org/ns/prov#Entity">entity</a>
-            <sup class="type-c" title="class">c</sup>, <a href="https://qudt.org/2.1/schema/qudt/Quantity"
-               target="_blank"
-               title="https://qudt.org/2.1/schema/qudt/Quantity">quantity</a>
+            <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://qudt.org/schema/qudt/Quantity" title="https://qudt.org/schema/qudt/Quantity">Quantity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -78,9 +126,7 @@ This section provides details for each class and property defined by The Provena
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="http://www.w3.org/ns/prov#Activity"
-               target="_blank"
-               title="http://www.w3.org/ns/prov#Activity">activity</a>
+            <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -89,6 +135,30 @@ This section provides details for each class and property defined by The Provena
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
+         <dd>
+            <a href="#inEmissionActivityContext" title="https://w3id.org/peco#inEmissionActivityContext">in emission activity context</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EmissionObservation">
+      <h3>Emission Observation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/peco#EmissionObservation</p>
+      <div class="comment">
+         <span class="markdown">A type of sosa:Observation that produces observation results which can be used to calculate peco:EmissionScore  associated with some peco:EmissionGenerationActivity.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
          <dd>
             <a href="#inEmissionActivityContext" title="https://w3id.org/peco#inEmissionActivityContext">in emission activity context</a>
             <sup class="type-op" title="object property">op</sup>
@@ -118,6 +188,166 @@ This section provides details for each class and property defined by The Provena
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://www.w3.org/ns/prov#Entity">
+      <h3>Entity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/prov#Entity</p>
+      <div class="comment">
+         <span class="markdown">An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.w3.org/ns/prov-o">https://www.w3.org/ns/prov-o</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#EmissionCalculationEntity" title="https://w3id.org/peco#EmissionCalculationEntity">Emission Calculation Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/Observation">
+      <h3>Observation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/Observation</p>
+      <div class="comment">
+         <span class="markdown">Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#EmissionObservation" title="https://w3id.org/peco#EmissionObservation">Emission Observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://qudt.org/schema/qudt/Quantity">
+      <h3>Quantity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://qudt.org/schema/qudt/Quantity</p>
+      <div class="comment">
+         <span class="markdown">A quantity is the measurement of an observable property of a particular object, event, or physical system.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/">http://qudt.org/schema/qudt/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#EmissionCalculationEntity" title="https://w3id.org/peco#EmissionCalculationEntity">Emission Calculation Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://qudt.org/schema/qudt/hasQuantityKind" title="http://qudt.org/schema/qudt/hasQuantityKind">has quantity kind</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit">unit</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://qudt.org/schema/qudt/QuantityKind">
+      <h3>Quantity Kind<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://qudt.org/schema/qudt/QuantityKind</p>
+      <div class="comment">
+         <span class="markdown">A Quantity Kind is any observable property that can be measured and quantified numerically.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/">http://qudt.org/schema/qudt/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://qudt.org/schema/qudt/hasQuantityKind" title="http://qudt.org/schema/qudt/hasQuantityKind">has quantity kind</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/Result">
+      <h3>Result<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/Result</p>
+      <div class="comment">
+         <span class="markdown">The Result of an Observation, Actuation, or act of Sampling.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/Sensor">
+      <h3>Sensor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/Sensor</p>
+      <div class="comment">
+         <span class="markdown">Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://qudt.org/schema/qudt/Unit">
+      <h3>Unit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://qudt.org/schema/qudt/Unit</p>
+      <div class="comment">
+         <span class="markdown">A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\(Q = nU\\).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/">http://qudt.org/schema/qudt/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit">unit</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
 </div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
@@ -125,10 +355,22 @@ This section provides details for each class and property defined by The Provena
          <a href="#hasEmissionScore" title="https://w3id.org/peco#hasEmissionScore">has emission score</a>
       </li>
       <li>
+         <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a>
+      </li>
+      <li>
          <a href="#http://qudt.org/schema/qudt/hasQuantityKind" title="http://qudt.org/schema/qudt/hasQuantityKind">has quantity kind</a>
       </li>
       <li>
+         <a href="#http://www.w3.org/ns/sosa/hasResult" title="http://www.w3.org/ns/sosa/hasResult">has result</a>
+      </li>
+      <li>
          <a href="#inEmissionActivityContext" title="https://w3id.org/peco#inEmissionActivityContext">in emission activity context</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/madeBySensor" title="http://www.w3.org/ns/sosa/madeBySensor">made by Sensor</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/phenomenonTime" title="http://www.w3.org/ns/sosa/phenomenonTime">phenomenon time</a>
       </li>
       <li>
          <a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit">unit</a>
@@ -159,6 +401,23 @@ This section provides details for each class and property defined by The Provena
          </dl>
       </div>
    </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+      <h3>has feature of interest<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasFeatureOfInterest</p>
+      <div class="comment">
+         <span class="markdown">A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://qudt.org/schema/qudt/hasQuantityKind">
       <h3>has quantity kind<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -170,20 +429,33 @@ This section provides details for each class and property defined by The Provena
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="https://qudt.org/2.1/schema/qudt/Quantity"
-                  target="_blank"
-                  title="https://qudt.org/2.1/schema/qudt/Quantity">quantity</a>
+               <a href="#https://qudt.org/schema/qudt/Quantity" title="https://qudt.org/schema/qudt/Quantity">Quantity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="https://qudt.org/2.1/schema/qudt/QuantityKind"
-                  target="_blank"
-                  title="https://qudt.org/2.1/schema/qudt/QuantityKind">quantity kind</a>
+               <a href="#https://qudt.org/schema/qudt/QuantityKind" title="https://qudt.org/schema/qudt/QuantityKind">Quantity Kind</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/hasResult">
+      <h3>has result<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasResult</p>
+      <div class="comment">
+         <span class="markdown">Relation linking an Observation and a Sensor or Actuator and a Result, which contains a value representing the value associated with the observed Property.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="inEmissionActivityContext">
       <h3>in emission activity context<sup class="type-op" title="object property">op</sup>
@@ -199,9 +471,7 @@ This section provides details for each class and property defined by The Provena
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="http://www.w3.org/ns/sosa/Observation"
-                  target="_blank"
-                  title="http://www.w3.org/ns/sosa/Observation">observation</a>
+               <a href="#EmissionObservation" title="https://w3id.org/peco#EmissionObservation">Emission Observation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -211,6 +481,40 @@ This section provides details for each class and property defined by The Provena
             </dd>
          </dl>
       </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/madeBySensor">
+      <h3>made by Sensor<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeBySensor</p>
+      <div class="comment">
+         <span class="markdown">Relation between an Observation and the Sensor which made the Observations.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/phenomenonTime">
+      <h3>phenomenon time<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/phenomenonTime</p>
+      <div class="comment">
+         <span class="markdown">The time that the Result of an Observation, Actuation, or Sampling applies to the FeatureOfInterest.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="http://qudt.org/schema/qudt/unit">
       <h3>unit<sup class="type-op" title="object property">op</sup>
@@ -222,29 +526,55 @@ This section provides details for each class and property defined by The Provena
       <div class="comment">
          <span class="markdown">A reference to the unit of measure of a quantity (variable or constant) of interest.</span>
       </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/">http://qudt.org/schema/qudt/</a>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="https://qudt.org/2.1/schema/qudt/Quantity"
-                  target="_blank"
-                  title="https://qudt.org/2.1/schema/qudt/Quantity">quantity</a>
+               <a href="#https://qudt.org/schema/qudt/Quantity" title="https://qudt.org/schema/qudt/Quantity">Quantity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="https://qudt.org/2.1/schema/qudt/Unit"
-                  target="_blank"
-                  title="https://qudt.org/2.1/schema/qudt/Unit">unit</a>
+               <a href="#https://qudt.org/schema/qudt/Unit" title="https://qudt.org/schema/qudt/Unit">Unit</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://qudt.org/schema/qudt/value" title="http://qudt.org/schema/qudt/value">value</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://qudt.org/schema/qudt/value">
+      <h3>value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://qudt.org/schema/qudt/value</p>
+      <div class="comment">
+         <span class="markdown">This property identifies the value associated with a data structure. The value may be a scalar or a reference to another object. The disjoint sub-properties of this data:value distinguish between scalar values and object references.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/peco#</dd>
+      </dl>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
 <sup class="type-c" title="Classes">c</sup>: Classes <br/>
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
