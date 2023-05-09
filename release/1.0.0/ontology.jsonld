@@ -2,20 +2,6 @@
   "@id" : "http://purl.org/dc/elements/1.1/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/elements/1.1/publisher",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An entity responsible for making the resource available."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://purl.org/dc/elements/1.1/"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "publisher"
-  } ]
-}, {
   "@id" : "http://purl.org/dc/elements/1.1/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -52,150 +38,50 @@
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://qudt.org/schema/qudt/Unit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "http://qudt.org/schema/qudt/hasQuantityKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://qudt.org/schema/qudt/Quantity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has quantity kind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://qudt.org/schema/qudt/QuantityKind"
+  } ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\\\(Q = nU\\\\)."
+    "@value" : "A reference to the unit of measure of a quantity (variable or constant) of interest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://qudt.org/schema/qudt/Quantity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://qudt.org/schema/qudt/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Unit"
-  } ]
-}, {
-  "@id" : "http://qudt.org/schema/qudt/abbreviation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An abbreviation for a unit is a short ASCII string that is used in place of the full name for the unit in contexts where non-ASCII characters would be problematic, or where using the abbreviation will enhance readability. When a power of abase unit needs to be expressed, such as squares this can be done using abbreviations rather than symbols. For example, sq ft means square foot, and cu ft means cubic foot."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://qudt.org/schema/qudt/"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "abbreviation"
+    "@value" : "unit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "https://qudt.org/schema/qudt/Unit"
+  } ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This property identifies the value associated with a data structure. The value may be a scalar or a reference to another object. The disjoint sub-properties of this data:value distinguish between scalar values and object references."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://qudt.org/schema/qudt/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "value"
   } ]
 }, {
   "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
-}, {
-  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Idiomatic property used for structured values"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "value"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/2001/XMLSchema#date",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
-}, {
-  "@id" : "http://www.w3.org/2006/time#Instant",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A temporal entity with zero extent or duration"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://www.w3.org/2006/time"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Time instant"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/2006/time#TemporalEntity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "A temporal interval or instant."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://www.w3.org/2006/time"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "Temporal entity"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/2006/time#hasBeginning",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "Beginning of a temporal entity."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://www.w3.org/2006/time"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "has beginning"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2006/time#Instant"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/2006/time#hasEnd",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "End of a temporal entity."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://www.w3.org/2006/time"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has end"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2006/time#Instant"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/2006/time#inXSDDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Position of an instant, expressed using xsd:date"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2006/time#Instant"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://www.w3.org/2006/time"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "in XSD date"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#date"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/2008/05/skos#Concept",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An abstract idea or notion; a unit of thought."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://www.w3.org/2008/05/skos"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Concept"
-  } ]
 }, {
   "@id" : "http://www.w3.org/2008/05/skos#prefLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
@@ -206,16 +92,16 @@
   "@id" : "http://www.w3.org/ns/org#memberOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.w3.org/ns/prov#Agent",
+  "@id" : "http://www.w3.org/ns/prov#Activity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity."
+    "@value" : "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://www.w3.org/ns/prov-o"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Agent"
+    "@value" : "Activity"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/prov#Entity",
@@ -230,56 +116,88 @@
     "@value" : "Entity"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/prov#Location",
+  "@id" : "http://www.w3.org/ns/sosa/Observation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."
+    "@value" : "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://www.w3.org/ns/prov-o"
+    "@id" : "http://www.w3.org/ns/sosa/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Location"
+    "@value" : "Observation"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/prov#atLocation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "http://www.w3.org/ns/sosa/Result",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Entity"
+    "@value" : "The Result of an Observation, Actuation, or act of Sampling."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://www.w3.org/ns/prov-o"
+    "@id" : "http://www.w3.org/ns/sosa/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "atLocation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Location"
+    "@value" : "Result"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "http://www.w3.org/ns/sosa/Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Entity"
+    "@value" : "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://www.w3.org/ns/prov#"
+    "@id" : "http://www.w3.org/ns/sosa/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "was derived from"
+    "@value" : "Sensor"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Entity"
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has feature of interest"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relation linking an Observation and a Sensor or Actuator and a Result, which contains a value representing the value associated with the observed Property."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has result"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/madeBySensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relation between an Observation and the Sensor which made the Observations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "made by Sensor"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/phenomenonTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The time that the Result of an Observation, Actuation, or Sampling applies to the FeatureOfInterest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "phenomenon time"
   } ]
 }, {
   "@id" : "http://xmlns.com/foaf/0.1/Organization",
@@ -327,6 +245,42 @@
     "@value" : "Daniel Garijo"
   } ]
 }, {
+  "@id" : "https://qudt.org/schema/qudt/Quantity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A quantity is the measurement of an observable property of a particular object, event, or physical system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://qudt.org/schema/qudt/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ]
+}, {
+  "@id" : "https://qudt.org/schema/qudt/QuantityKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A Quantity Kind is any observable property that can be measured and quantified numerically."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://qudt.org/schema/qudt/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity Kind"
+  } ]
+}, {
+  "@id" : "https://qudt.org/schema/qudt/Unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\\\(Q = nU\\\\)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://qudt.org/schema/qudt/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Unit"
+  } ]
+}, {
   "@id" : "https://schema.org/image",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -336,37 +290,23 @@
   "@id" : "https://schema.org/logo",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://schema.org/molecularFormula",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The empirical formula is the simplest whole number ratio of all the atoms in a molecule."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://schema.org/"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "molecular formula"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ecfo",
+  "@id" : "https://w3id.org/peco",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "en",
-    "@value" : "This ontology defines a vocabulary for describing carbon emission conversion factors (CF). These are values typically used to calculate carbon emissions where the CF multiplies a quantified estimate of the energy (e.g., kWh of electricity, litters of fuel, etc.) used by a particular activity."
+    "@value" : "This ontology defines a vocabulary for describing provenance traces of carbon emission calculations by capturing the quantifiable measurements of carbon emission sources used by some activities (e.g., electricity used by a machinery to produce a product, petrol used to make a car journey, etc.) and emission conversion factors used to estimate the carbon emissions produced by these. In addition, the ontology provides the ability to capture various data transformations that occurred before energy estimates may be used with relevant conversion factors. For example, sensors may provide raw readings about a water flow of an irrigation rig in an agri-food operation which is then used as a proxy to estimate the total volume of fertilisers used."
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@language" : "en",
-    "@value" : "The Emission Conversion Factor Ontology"
+    "@value" : "The Provenance of Emission Calculations Ontology"
   } ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "en",
-    "@value" : "With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to describe these conversion factors and their associated properties (e.g., origin, applicable location, etc.) to enhance the transparency of the carbon footprint calculations."
+    "@value" : "With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to enhance the transparency of the carbon footprint calculations via detailed provenance traces."
   } ],
   "http://purl.org/dc/terms/created" : [ {
     "@language" : "en",
-    "@value" : "April 20th, 2023"
+    "@value" : "April 24th, 2023"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@id" : "https://orcid.org/0000-0001-6634-3266"
@@ -398,283 +338,123 @@
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@language" : "en",
-    "@value" : "ecfo"
+    "@value" : "peco"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "https://w3id.org/ecfo#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "1.0.0 release of the Emission Conversion Factor Ontology"
+    "@value" : "https://w3id.org/peco#"
   } ],
   "http://www.w3.org/2002/07/owl#priorVersion" : [ {
-    "@id" : "https://w3id.org/ecfo/0.0.2"
+    "@id" : "https://w3id.org/peco/0.0.1"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/ecfo/1.0.0"
+    "@id" : "https://w3id.org/peco/1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
     "@value" : "1.0.0"
   } ],
   "https://schema.org/image" : [ {
-    "@id" : "https://raw.githubusercontent.com/TEC-Toolkit/ECFO/21b4380e1f84f85f7cbc59f724157498e9d72094/Logo%20ECFO.svg"
+    "@id" : "https://raw.githubusercontent.com/TEC-Toolkit/PECO/e0c98c9426c7e18f7c9b048771047558f7c9fd54/Logo%20PECO.svg"
   } ],
   "https://schema.org/includedInDataCatalog" : [ {
-    "@id" : "https://lov.linkeddata.es/dataset/lov/vocabs/ecfo"
+    "@id" : "https://lov.linkeddata.es/dataset/lov/vocabs/peco"
   } ],
   "https://schema.org/logo" : [ {
-    "@id" : "https://raw.githubusercontent.com/TEC-Toolkit/ECFO/21b4380e1f84f85f7cbc59f724157498e9d72094/Logo%20ECFO.svg"
+    "@id" : "https://raw.githubusercontent.com/TEC-Toolkit/PECO/e0c98c9426c7e18f7c9b048771047558f7c9fd54/Logo%20PECO.svg"
   } ]
 }, {
-  "@id" : "https://w3id.org/ecfo#ChemicalCompound",
+  "@id" : "https://w3id.org/peco#EmissionCalculationActivity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Pure chemical substance consisting of two or more different chemical elements (source: https://www.wikidata.org/wiki/Q11173)"
+    "@value" : "An activity representing a whole or a part of the carbon emission calculation process."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Chemical compound"
+    "@value" : "Emission Calculation Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Activity"
   } ]
 }, {
-  "@id" : "https://w3id.org/ecfo#EmissionConversionFactor",
+  "@id" : "https://w3id.org/peco#EmissionCalculationEntity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A concept representing the coefficient value used in greenhouse gas (GHG) emission calculations (activity data x emission conversion factor = GHG emissions)  and additional metadata (e.g., applicable location, publisher, etc.)."
+    "@value" : "A prov:Entitiy representing quantifiable input and output data described as qudt:Quantity that influenced emission calculation process. If this data is produced as a result of some sensor observation it would be also of type sosa:Result."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Emission Conversion Factor"
+    "@value" : "Emission Calculation Entity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/prov#Entity"
+  }, {
+    "@id" : "https://qudt.org/schema/qudt/Quantity"
   } ]
 }, {
-  "@id" : "https://w3id.org/ecfo#Scope",
+  "@id" : "https://w3id.org/peco#EmissionGenerationActivity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Type of emissions a company creates in its own operations and in its wider 'value chain'. Typically emissions fall under three categories - Scope 1, Scope 2 and Scope 3."
+    "@value" : "An activity that produces emissions. For example, training of ML models, driving a car, farming operation, etc. This activity can be represented at differentl levels of abstraction, for example, as a single overarching activity (e.g., factory producion for year 2022) or as a number of smaller activities (e.g., production of a single batch of products)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Scope"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ecfo#Scope1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ecfo#Scope"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Scope 1 (direct emissions) emissions are those from activities owned or controlled by your organisation. Examples of Scope 1 emissions include emissions from combustion in owned or controlled boilers, furnaces and vehicles; and emissions from chemical production in owned or controlled process equipment."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "scope 1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ecfo#Scope2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ecfo#Scope"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Scope 2 (energy indirect) emissions are those released into the atmosphere that are associated with your consumption of purchased electricity, heat, steam and cooling. These indirect emissions are a consequence of your organisation’s energy use, but occur at sources you do not own or control."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "scope 2"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ecfo#Scope3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ecfo#Scope"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Scope 3 (other indirect) emissions are a consequence of your actions that occur at sources you do not own or control and are not classed as Scope 2 emissions. Examples of Scope 3 emissions are business travel by means not owned or controlled by your organisation, waste disposal, materials or fuels your organisation purchases. Deciding if emissions from a vehicle, office or factory that you use are Scope 1 or Scope 3 may depend on how you define your operational boundaries. Scope 3 emissions can be from activities that are upstream or downstream of your organisation. More information on Scope 3 and other aspects of reporting can be found in the Greenhouse Gas Protocol Corporate Standard."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "scope 3"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ecfo#Tag",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A generic class to describe a category/tag that ecfo:EmissionFactor. Use ecfo:hasTag to link the category/tag and rdf:value to provide the name of the category. A single ecfo:EmissionFactor may refer to multiple tags. To identify individual conversion factors a union of tags should be considered."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Tag"
+    "@value" : "Emission Generation Activity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2008/05/skos#Concept"
+    "@id" : "http://www.w3.org/ns/prov#Activity"
   } ]
 }, {
-  "@id" : "https://w3id.org/ecfo#hasAdditionalContext",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@id" : "https://w3id.org/peco#EmissionObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Conversion factors often have subtelties that contextualize the emission source. For example the emission source may be a transportation method (car), but additional context may indicate that the CF is for \"large cars\", or lars with more than 120 horse power.\r\nThese subteltlies are captured in the \"hasAdditionalContext\" property"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ecfo#EmissionConversionFactor"
+    "@value" : "A type of sosa:Observation that produces observation results which can be used to calculate peco:EmissionScore  associated with some peco:EmissionGenerationActivity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has additional context"
+    "@value" : "Emission Observation"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Activity"
+  }, {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
   } ]
 }, {
-  "@id" : "https://w3id.org/ecfo#hasApplicableLocation",
+  "@id" : "https://w3id.org/peco#EmissionScore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The result of the peco:EmissionCalculationActivity representing the carbon emissions produced by the linked peco:EmissionGenerationActivity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Emission Score"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/peco#EmissionCalculationEntity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/peco#hasEmissionScore",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A geographic area (e.g., a country) or a physical location (e.g., a farm) to which a specific ecfo:ConversionFactor may be applied."
+    "@value" : "A property linking peco:EmissionGenerationActivity with a quantifiable representation of the amount of emissions prodcued by this activity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ecfo#EmissionConversionFactor"
+    "@id" : "https://w3id.org/peco#EmissionGenerationActivity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has applicable location"
+    "@value" : "has emission score"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/ns/prov#atLocation"
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/peco#EmissionScore"
   } ]
 }, {
-  "@id" : "https://w3id.org/ecfo#hasApplicablePeriod",
+  "@id" : "https://w3id.org/peco#inEmissionActivityContext",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A time period for which the emission conversion factor is considered to be most relevant."
+    "@value" : "A property linking peco:EmissionGenerationActivity to sosa:Observation. For example, a machine learning training activity (peco:EmissionGenerationActivity) is linked to electricity monitoring activity (sosa:Observation) that monitors electricity consumption of a GPU (sosa:FeatureOfInterest) used to train the ML model."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ecfo#EmissionConversionFactor"
+    "@id" : "https://w3id.org/peco#EmissionObservation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has applicable period"
+    "@value" : "in emission activity context"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ecfo#hasEmissionSource",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Source of the emission in a conversion factor (e.g., butane, refrigerator, herd of animals, etc.)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ecfo#EmissionConversionFactor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has emission source"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ecfo#hasEmissionTarget",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Target chemical compound of a conversion factor (e.g., CO2e). The target compund is associated with the target unit"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ecfo#EmissionConversionFactor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has emission target"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/ecfo#ChemicalCompound"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ecfo#hasScope",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A property linking conversion factor to the description of the emission scope."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ecfo#EmissionConversionFactor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has scope"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/ecfo#Scope"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ecfo#hasSourceUnit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The unit corresponding to the source data that is multiplied by the ecfo:ConversionFactor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ecfo#EmissionConversionFactor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has source unit"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://qudt.org/schema/qudt/Unit"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ecfo#hasTag",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A property to assign a specific category/tag to ecfo:ConversionFactor."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ecfo#EmissionConversionFactor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has tag"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/ecfo#Tag"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ecfo#hasTargetUnit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The unit corresponding to the result of multiplying input data by the ecfo:ConversionFactor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ecfo#EmissionConversionFactor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has target unit"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://qudt.org/schema/qudt/Unit"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ecfo#hasUsageNotes",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property used to describe any limitations, disclaimers or usage notes associated with a CF. For example \"This CF is an estimation based on local data and should be superseeded by governmental sources\""
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ecfo#EmissionConversionFactor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has usage notes"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "https://w3id.org/peco#EmissionGenerationActivity"
   } ]
 }, {
   "@id" : "https://www.abdn.ac.uk#this",
