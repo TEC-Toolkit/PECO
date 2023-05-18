@@ -6,6 +6,17 @@ The list of PECO competency questions.
 
 To test the CQs use the provenance_trace.ttl and https://raw.githubusercontent.com/TEC-Toolkit/cfkg/main/wikidata_labels/wikidata_labels.ttl 
 
+### Prefixes
+
+```sparql
+PREFIX peco: <https://w3id.org/peco#> 
+PREFIX ecfo: <https://w3id.org/ecfo#>  
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>  
+PREFIX prov:<http://www.w3.org/ns/prov#> 
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+```
 
 ### CQ1: What are the emissions of an activity (e.g., training a model)?
 
