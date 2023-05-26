@@ -1,6 +1,6 @@
 <div style="text-align: center">
 
-  <img src="https://tec-toolkit.github.io/assets/Logo%20ECFO.svg" alt="PECO Logo" width=20% />
+  <img src="https://tec-toolkit.github.io/assets/Logo%20PECO.svg" alt="PECO Logo" width=20% />
 
 # PECO - Provenance of Emission Calculations Ontology
 
