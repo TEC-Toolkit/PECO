@@ -195,7 +195,7 @@ rdf:HTML rdf:type rdfs:Datatype .
 ###  http://qudt.org/schema/qudt/value
 <http://qudt.org/schema/qudt/value> rdf:type owl:DatatypeProperty ;
                                     rdfs:comment "This property identifies the value associated with a data structure. The value may be a scalar or a reference to another object. The disjoint sub-properties of this data:value distinguish between scalar values and object references." ;
-                                    rdfs:isDefinedBy "https://qudt.org/schema/qudt/" ;
+                                    rdfs:isDefinedBy <https://qudt.org/schema/qudt/> ;
                                     rdfs:label "value" .
 
 
